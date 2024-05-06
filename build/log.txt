@@ -1,0 +1,2 @@
+2024-05-03 15:41:00	[root]	/home/qlc/webserver/test/test.cpp [DEBUG] 这是用宏定义来输入的 0 
+2024-05-03 15:41:00	[root]	/home/qlc/webserver/test/test.cpp [DEBUG] 这是第二行测试 0 

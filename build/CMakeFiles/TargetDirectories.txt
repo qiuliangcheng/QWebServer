@@ -1,0 +1,5 @@
+/home/qlc/webserver/build/CMakeFiles/qlc.dir
+/home/qlc/webserver/build/CMakeFiles/test.dir
+/home/qlc/webserver/build/CMakeFiles/test_config.dir
+/home/qlc/webserver/build/CMakeFiles/edit_cache.dir
+/home/qlc/webserver/build/CMakeFiles/rebuild_cache.dir
