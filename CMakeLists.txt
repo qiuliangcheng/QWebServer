@@ -9,15 +9,28 @@ set(LIB_SRC
     src/qlc_log.cpp
     src/util.cpp
     src/config.cpp
+    src/thread.cpp
     )
+
 find_library(YAMLCPP yaml-cpp)
+find_library(PTHREAD pthread)
 add_library(qlc SHARED ${LIB_SRC})
+set(LIB_QLC 
+    qlc 
+    ${YAMLCPP} 
+    ${PTHREAD}
+)
 add_executable(test test/test.cpp)
-add_dependencies(test qlc)
-target_link_libraries(test qlc ${YAMLCPP})
+# add_dependencies(test qlc)
+target_link_libraries(test qlc ${LIB_QLC})
 
 add_executable(test_config test/test_config.cpp)
-add_dependencies(test_config qlc)
-target_link_libraries(test_config qlc ${YAMLCPP})
+# add_dependencies(test_config qlc)
+target_link_libraries(test_config qlc ${LIB_QLC})
+
+add_executable(test_thread test/test_thread.cpp)
+# add_dependencies(test_thread qlc)
+target_link_libraries(test_thread qlc ${LIB_QLC})
+
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

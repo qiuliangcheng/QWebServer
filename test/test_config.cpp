@@ -132,7 +132,7 @@ void test_config() {
 }
 
 void test_log() {
-    static qlc::Logger::ptr system_log = QLC_LOG_NAME("system");
+    static qlc::Logger::ptr system_log = QLC_LOG_NAME("System");
     QLC_LOG_INFO(system_log) << "hello system" << std::endl;
     std::cout << qlc::Loggermgr::GetInstanceX()->toYamlString() << std::endl;
     YAML::Node root = YAML::LoadFile("../log.yml");

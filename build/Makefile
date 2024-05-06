@@ -158,6 +158,19 @@ test_config/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
 .PHONY : test_config/fast
 
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -205,6 +218,30 @@ src/qlc_log.s: src/qlc_log.cpp.s
 src/qlc_log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/qlc_log.cpp.s
 .PHONY : src/qlc_log.cpp.s
+
+src/thread.o: src/thread.cpp.o
+.PHONY : src/thread.o
+
+# target to build an object file
+src/thread.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/thread.cpp.o
+.PHONY : src/thread.cpp.o
+
+src/thread.i: src/thread.cpp.i
+.PHONY : src/thread.i
+
+# target to preprocess a source file
+src/thread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/thread.cpp.i
+.PHONY : src/thread.cpp.i
+
+src/thread.s: src/thread.cpp.s
+.PHONY : src/thread.s
+
+# target to generate assembly for a file
+src/thread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/thread.cpp.s
+.PHONY : src/thread.cpp.s
 
 src/util.o: src/util.cpp.o
 .PHONY : src/util.o
@@ -278,6 +315,30 @@ test/test_config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.s
 .PHONY : test/test_config.cpp.s
 
+test/test_thread.o: test/test_thread.cpp.o
+.PHONY : test/test_thread.o
+
+# target to build an object file
+test/test_thread.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.o
+.PHONY : test/test_thread.cpp.o
+
+test/test_thread.i: test/test_thread.cpp.i
+.PHONY : test/test_thread.i
+
+# target to preprocess a source file
+test/test_thread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.i
+.PHONY : test/test_thread.cpp.i
+
+test/test_thread.s: test/test_thread.cpp.s
+.PHONY : test/test_thread.s
+
+# target to generate assembly for a file
+test/test_thread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.s
+.PHONY : test/test_thread.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -289,12 +350,16 @@ help:
 	@echo "... qlc"
 	@echo "... test"
 	@echo "... test_config"
+	@echo "... test_thread"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
 	@echo "... src/qlc_log.o"
 	@echo "... src/qlc_log.i"
 	@echo "... src/qlc_log.s"
+	@echo "... src/thread.o"
+	@echo "... src/thread.i"
+	@echo "... src/thread.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"
@@ -304,6 +369,9 @@ help:
 	@echo "... test/test_config.o"
 	@echo "... test/test_config.i"
 	@echo "... test/test_config.s"
+	@echo "... test/test_thread.o"
+	@echo "... test/test_thread.i"
+	@echo "... test/test_thread.s"
 .PHONY : help
 
 
