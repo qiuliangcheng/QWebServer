@@ -133,6 +133,7 @@ namespace qlc{
     }
     void Logger::setFormatter(const std::string &val)
     {
+        //我一开始在这里加了个锁 然后造成了死锁的情况 因为这里加锁后 setformatter那函数里也加了锁 然后就造成了死锁的情况了
         qlc::LogFormatter::ptr formatter(new LogFormatter(val));
         if(formatter->isError()){
             std::cout<<"logger设置的格式错误了"<<std::endl;
