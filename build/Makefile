@@ -195,6 +195,30 @@ src/config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
 
+src/mutex.o: src/mutex.cpp.o
+.PHONY : src/mutex.o
+
+# target to build an object file
+src/mutex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/mutex.cpp.o
+.PHONY : src/mutex.cpp.o
+
+src/mutex.i: src/mutex.cpp.i
+.PHONY : src/mutex.i
+
+# target to preprocess a source file
+src/mutex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/mutex.cpp.i
+.PHONY : src/mutex.cpp.i
+
+src/mutex.s: src/mutex.cpp.s
+.PHONY : src/mutex.s
+
+# target to generate assembly for a file
+src/mutex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/mutex.cpp.s
+.PHONY : src/mutex.cpp.s
+
 src/qlc_log.o: src/qlc_log.cpp.o
 .PHONY : src/qlc_log.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/mutex.o"
+	@echo "... src/mutex.i"
+	@echo "... src/mutex.s"
 	@echo "... src/qlc_log.o"
 	@echo "... src/qlc_log.i"
 	@echo "... src/qlc_log.s"

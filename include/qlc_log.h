@@ -13,6 +13,7 @@
 #include <time.h>
 #include "util.h"
 #include "singleton.h"
+#include "thread.h"
 #define QLC_LOG_LEVEL(logger, level) \
     if(logger->getLevel() <= level) \
         qlc::LogEventWrap(qlc::LogEvent::ptr(new qlc::LogEvent(logger, level, \
@@ -112,6 +113,7 @@ public:
     //%t %m %n %thread_id
     typedef std::shared_ptr<LogFormatter> ptr;
     std::string format(std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event);//将数据格式化为想要的数据 
+    std::ostream& format(std::ostream& ofs, std::shared_ptr<Logger> logger, LogLevel::Level level, LogEvent::ptr event);
     bool isError() const {return m_error;}
     std::string getPattern() const {return m_pattern;}
 public:
@@ -134,6 +136,8 @@ private:
 class LogAppender{
 friend class Logger;
 public:
+    typedef Spinlock MutexType;
+
     typedef std::shared_ptr<LogAppender> ptr;
     virtual std::string toYamlString()=0;
     virtual ~LogAppender(){}//删除在哪个地方的日志是变化的
@@ -141,11 +145,12 @@ public:
     void setFormatter(LogFormatter::ptr val);
     LogLevel::Level getLevel() const {return m_level;}
     void setLevel(LogLevel::Level level) {m_level=level;}
-    LogFormatter::ptr getFormatter() const {return m_formatter;}
+    LogFormatter::ptr getFormatter();
     
 protected:
     bool hasFormatter =false;//appender是否有自己的formatter 如果没有的话才把logger的formatter传给他
     LogLevel::Level m_level=LogLevel::DEBUG;//要初始化 
+    MutexType m_mutex;
     //append应该还要定义输出什么样子的格式
     LogFormatter::ptr m_formatter;
 };    
@@ -157,6 +162,7 @@ friend class LoggerManager;
 public:
     // int enable_shared_from_this() { }
     typedef std::shared_ptr<Logger> ptr;
+    typedef Spinlock MutexType;
     std::string toYamlString();
     Logger(const std::string &name="root");
     void Log(LogLevel::Level level, const LogEvent::ptr event);
@@ -169,15 +175,16 @@ public:
     void delAppender(LogAppender::ptr appender);
     LogLevel::Level getLevel() const {return m_level;}
     void setFormatter(LogFormatter::ptr val);
-    LogFormatter::ptr getFormatter() const{return m_formater;}
+    LogFormatter::ptr getFormatter(); 
     void setLevel(LogLevel::Level level){m_level =level;}
     const std::string getName() const {return m_name;}
     void setFormatter(const std::string& val);
-    void clearAppenders(){m_appenders.clear(); }
+    void clearAppenders();
 private: 
     std::string m_name;
     LogLevel::Level m_level; //满足日志级别的才会输出到日志
     std::list<LogAppender::ptr> m_appenders;
+    MutexType m_mutex;
     Logger::ptr m_root; //看看logger是否有自带appender 如果忘记了添加appender 就把mroot的appender发给他 并且每一个logger都有一个相同的root
     LogFormatter::ptr m_formater; //logger自带一个formater  appender如果没有的话就用自带的
 
@@ -201,12 +208,13 @@ public:
 private:
     std::string m_filename;
     std::ofstream m_filestream;//使用流的方式写入文件
-
+    uint64_t m_lastTime = 0;//防止写到一半突然把文件删除了
 };
 //日志管理器
 class LoggerManager{
 public:
     LoggerManager();
+    typedef Spinlock MutexType;
     std::string toYamlString();
     Logger::ptr getLogger(const std::string& name);
     //返回主日志器
@@ -215,6 +223,7 @@ public:
 private:
     std::map<std::string,Logger::ptr> m_loggers;
     Logger::ptr m_root;
+    MutexType m_mutex;
 };
 typedef qlc::Singleton<LoggerManager> Loggermgr;//logger管理类只有一个 所以需要单例模式
 }

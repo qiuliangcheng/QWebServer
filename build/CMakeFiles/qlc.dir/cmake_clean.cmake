@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../lib/libqlc.so"
   "CMakeFiles/qlc.dir/src/config.cpp.o"
   "CMakeFiles/qlc.dir/src/config.cpp.o.d"
+  "CMakeFiles/qlc.dir/src/mutex.cpp.o"
+  "CMakeFiles/qlc.dir/src/mutex.cpp.o.d"
   "CMakeFiles/qlc.dir/src/qlc_log.cpp.o"
   "CMakeFiles/qlc.dir/src/qlc_log.cpp.o.d"
   "CMakeFiles/qlc.dir/src/thread.cpp.o"

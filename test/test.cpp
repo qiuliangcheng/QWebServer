@@ -1,7 +1,7 @@
 #include <iostream>
 #include <pthread.h>
 #include "qlc_log.h"
-
+//ntpdate ntp.aliyun.com 同步系统时间的命令
 int main(int argc,char* argv[]){
     qlc::Logger::ptr logger(new qlc::Logger);
     qlc::LogAppender::ptr fileappender(new qlc::fileAppender("./log.txt"));

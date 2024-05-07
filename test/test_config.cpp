@@ -5,8 +5,8 @@
 #include "config.h"
 qlc::ConfigVar<int>::ptr int_value_config = qlc::Config::Lookup("system.my.port",(int)8080,"system.port");
 qlc::ConfigVar<float>::ptr float_value_config = qlc::Config::Lookup("system.value",(float)1222,"system.value");
-qlc::ConfigVar<std::vector<int>>::ptr vec_value_config = qlc::Config::Lookup("system.vec_value",std::vector<int>{1,2},"system.value");
-qlc::ConfigVar<std::map<std::string,int>>::ptr map_value_config = qlc::Config::Lookup("system.map_value",std::map<std::string,int>{{"k1",22}},"system.value");
+qlc::ConfigVar<std::vector<int>>::ptr vec_value_config = qlc::Config::Lookup("system.vec_value",std::vector<int>{1,2},"system.VECTOR");
+qlc::ConfigVar<std::map<std::string,int>>::ptr map_value_config = qlc::Config::Lookup("system.map_value",std::map<std::string,int>{{"k1",22}},"system.map");
 
 void print_yaml(const YAML::Node& node, int level) {
     if(node.IsScalar()) {
@@ -85,7 +85,7 @@ public:
     }
 };
 }
-qlc::ConfigVar<Person>::ptr Person_value_config = qlc::Config::Lookup("class.person",Person(),"system.value");
+qlc::ConfigVar<Person>::ptr Person_value_config = qlc::Config::Lookup("class.person",Person(),"class.person");
 
 
 
@@ -116,6 +116,7 @@ void test_config() {
         QLC_LOG_INFO(QLC_LOG_ROOT()) << #prefix " " #name " yaml: " << g_var->toString(); \
     }
     Person_value_config->addListener([](const Person &old,const Person &new_value){
+        std::cout<<"listter里的输入输出"<<std::endl;
         QLC_LOG_INFO(QLC_LOG_ROOT()) << "改变前的数据： "<<old.toString()<< "改变后的数据: "<<new_value.toString() ;
     });
     // XX(vec_value_config, int_vec, before);
@@ -149,14 +150,14 @@ void test_log() {
 
 
 
-
-
-
-
-
 int main(int argc,char** agrv){
 
     QLC_LOG_DEBUG(QLC_LOG_ROOT())<<int_value_config->toString();
     test_log();
-
+    qlc::Config::Visit([](qlc::ConfigVarBase::ptr var) {
+        QLC_LOG_INFO(QLC_LOG_ROOT()) << "name=" << var->getName()
+                    << " description=" << var->getDescription()
+                    << " typename=" << var->getTypeName()
+                    << " value=" << var->toString();
+    });
 }

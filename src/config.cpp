@@ -5,7 +5,15 @@ ConfigVarBase::ptr Config::LookupBase(const std::string& name) {
     auto it = GetDatas().find(name);
     return it == GetDatas().end() ? nullptr : it->second;
 }
-// map 3 序列4 
+void Config::Visit(std::function<void(ConfigVarBase::ptr)> cb)
+{
+    MutexType::ReadLock lock(GetMutex());
+    ConfigVarMap&m= GetDatas();
+    for(auto i:m){
+        cb(i.second);
+    }
+}
+// map 3 序列4
 static void ListAllMember(const std::string& prefix,
                           const YAML::Node& node,
                           std::list<std::pair<std::string, const YAML::Node> >& output) {
@@ -30,7 +38,6 @@ void Config::LoadFromYaml(const YAML::Node &root)
 {
     std::list<std::pair<std::string, const YAML::Node> > all_nodes;
     ListAllMember("", root, all_nodes);
-
     for(auto& i : all_nodes) {
         std::string key = i.first;
         if(key.empty()) {
@@ -42,15 +49,19 @@ void Config::LoadFromYaml(const YAML::Node &root)
 
         if(var) {
             if(i.second.IsScalar()) {
+                
                 var->fromString(i.second.Scalar());
             } else {
+                
                 std::stringstream ss;
                 ss << i.second;
+                
                 var->fromString(ss.str());
+                
             }
         }
     }
-
+    
 }
 
 }

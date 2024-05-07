@@ -1,0 +1,22 @@
+2024-05-07 22:51:37	name=class.person description=class.person typename=6Person value=name: ""
+age: 0
+sex: true	/home/qlc/webserver/test/test_config.cpp	root[INFO]
+2024-05-07 22:51:37	name=system.map_value description=system.map typename=St3mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiSt4lessIS5_ESaISt4pairIKS5_iEEE value=k1: 22	/home/qlc/webserver/test/test_config.cpp	root[INFO]
+2024-05-07 22:51:37	name=system.value description=system.value typename=f value=1222	/home/qlc/webserver/test/test_config.cpp	root[INFO]
+2024-05-07 22:51:37	name=system.my.port description=system.port typename=i value=8080	/home/qlc/webserver/test/test_config.cpp	root[INFO]
+2024-05-07 22:51:37	name=system.vec_value description=system.VECTOR typename=St6vectorIiSaIiEE value=- 1
+- 2	/home/qlc/webserver/test/test_config.cpp	root[INFO]
+2024-05-07 22:51:37	name=logs description=logs config typename=St3setIN3qlc9LogDefineESt4lessIS1_ESaIS1_EE value=- name: System
+  level: DEBUG
+  formatter: "%d%T%m%T%f%T%c[%p]%n"
+  appenders:
+    - type: fileAppender
+      file: ../logs/system.txt
+    - type: stdoutAppender
+- name: root
+  level: INFO
+  formatter: "%d%T%m%T%f%T%c[%p]%n"
+  appenders:
+    - type: fileAppender
+      file: ../logs/root.txt
+    - type: stdoutAppender	/home/qlc/webserver/test/test_config.cpp	root[INFO]

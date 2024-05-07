@@ -204,6 +204,7 @@ public:
 template<class T,class FromStr=LexicalCast<std::string,T>, class ToStr=LexicalCast<T,std::string>>
 class ConfigVar : public ConfigVarBase {
 public:
+    typedef RWMutex MutexType;
     typedef std::shared_ptr<ConfigVar> ptr;
     typedef std::function<void (const T& old_value, const T& new_value)> on_change_cb;
     ConfigVar(const std::string& name
@@ -219,6 +220,7 @@ public:
      */
     std::string toString() override {
         try {
+            MutexType::ReadLock lock(m_mutex);
             return ToStr()(m_val); 
         } catch (std::exception& e) {
             QLC_LOG_ERROR(QLC_LOG_ROOT()) << "ConfigVar::toString exception "
@@ -246,28 +248,40 @@ public:
         return typeid(T).name();
     }
     const T getValue() {
+        MutexType::ReadLock lock(m_mutex);
         return m_val;
     }
     void setValue(const T &v)
-    {
-        if(m_val == v){
-            return;
+    {   
+        {
+            
+            MutexType::ReadLock lock(m_mutex);
+            if(m_val == v){
+                
+                return;
+            }
+            for(auto &i :m_cbs){
+                i.second(m_val,v);
+            }
         }
-        for(auto &i :m_cbs){
-            i.second(m_val,v);
-        }
+        
+        MutexType::WriteLock ll(m_mutex);
         m_val = v;
     }
+
     uint64_t addListener(on_change_cb cb) {
+        MutexType::WriteLock ll(m_mutex);
         static uint64_t s_fun_id = 0;
         ++s_fun_id;
         m_cbs[s_fun_id] = cb;
         return s_fun_id;
     }
     void delListener(uint64_t key) {
+        MutexType::WriteLock ll(m_mutex);
         m_cbs.erase(key);
     }
     on_change_cb getListener(uint64_t key) {
+        MutexType::ReadLock lock(m_mutex);
         auto it = m_cbs.find(key);
         return it == m_cbs.end() ? nullptr : it->second;
     }
@@ -276,18 +290,14 @@ public:
     }
 
 private:
+    MutexType m_mutex;
     T m_val;
     std::map<uint64_t, on_change_cb> m_cbs;
 };
 
-
-
-
-
-
-
 class Config {
 public:
+    typedef RWMutex MutexType;
     typedef std::unordered_map<std::string, ConfigVarBase::ptr> ConfigVarMap;
     /*
      * @brief 获取/创建对应参数名的配置参数
@@ -303,6 +313,7 @@ public:
     static typename ConfigVar<T>::ptr Lookup(const std::string& name,
             const T& default_value, const std::string& description = "") {
         auto it = GetDatas().find(name);
+        MutexType::WriteLock lock(GetMutex());
         if(it != GetDatas().end()) {
             auto tmp = std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
             if(tmp) {
@@ -334,6 +345,7 @@ public:
      */
     template<class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name) {
+        MutexType::ReadLock lock(GetMutex());
         auto it = GetDatas().find(name);
         if(it == GetDatas().end()) {
             return nullptr;
@@ -354,16 +366,21 @@ public:
      * @brief 遍历配置模块里面所有配置项
      * @param[in] cb 配置项回调函数
      */
-    // static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
+    static void Visit(std::function<void(ConfigVarBase::ptr)> cb);
 private:
     /**
      * @brief 返回所有的配置项
      */
+    //因为静态成员初始化没有严格的顺序 所以得用这种方式 防止 我的ConfigVar的lookup函数初始化的时候但是我的map还没初始化成功
     static ConfigVarMap& GetDatas() {
         static ConfigVarMap s_datas;
         return s_datas;
     }
-
+    static MutexType& GetMutex(){
+        static MutexType m_mutex;
+        return m_mutex;
+    }
+    
 
 };
 

@@ -1,9 +1,7 @@
 #ifndef __QLC_THREAD_H
 #define __QLC_THREAD_H
-#include "qlc_log.h"
-#include <pthread.h>
-#include <memory>
-#include <functional>
+#include "mutex.h"
+
 namespace qlc{
 class Thread{
 public:
@@ -28,7 +26,7 @@ private:
     //线程执行函数
     std::function<void()> m_cb;
     std::string m_name;//线程名称
-
+    Semaphore m_semaphore;
 
 };
 

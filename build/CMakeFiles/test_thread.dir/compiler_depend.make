@@ -52,7 +52,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
-  /usr/include/x86_64-linux-gnu/bits/wchar2.h \
   /usr/include/c++/11/cstdint \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
   /usr/include/stdint.h \
@@ -129,11 +128,8 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/bits/select.h \
   /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
-  /usr/include/x86_64-linux-gnu/bits/select2.h \
   /usr/include/alloca.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  /usr/include/x86_64-linux-gnu/bits/stdlib.h \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/cstdio \
   /usr/include/stdio.h \
@@ -142,8 +138,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
   /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
   /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio.h \
-  /usr/include/x86_64-linux-gnu/bits/stdio2.h \
   /usr/include/c++/11/cerrno \
   /usr/include/errno.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
@@ -234,7 +228,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd.h \
   /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/linux/close_range.h \
   /usr/include/x86_64-linux-gnu/sys/syscall.h \
@@ -243,9 +236,13 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
   ../include/singleton.h \
   ../include/thread.h \
-  ../include/qlc_log.h \
+  ../include/mutex.h \
   /usr/include/c++/11/functional \
-  /usr/include/c++/11/bits/std_function.h
+  /usr/include/c++/11/bits/std_function.h \
+  /usr/include/semaphore.h \
+  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+  /usr/include/c++/11/atomic \
+  ../include/thread.h
 
 
 ../include/singleton.h:
@@ -253,8 +250,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
-/usr/include/x86_64-linux-gnu/bits/unistd.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 
@@ -280,7 +275,11 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 /usr/include/c++/11/bits/basic_ios.tcc:
 
+/usr/include/c++/11/bits/locale_facets.tcc:
+
 /usr/include/c++/11/bits/streambuf_iterator.h:
+
+/usr/include/c++/11/cwctype:
 
 /usr/include/c++/11/bits/locale_facets.h:
 
@@ -317,6 +316,8 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 /usr/include/c++/11/bits/shared_ptr_atomic.h:
 
 /usr/include/c++/11/bits/nested_exception.h:
+
+/usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
 /usr/include/c++/11/exception:
 
@@ -374,25 +375,13 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 /usr/include/c++/11/cerrno:
 
-/usr/include/c++/11/bits/locale_facets.tcc:
-
-/usr/include/x86_64-linux-gnu/bits/stdio2.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
-
 /usr/include/stdio.h:
 
 /usr/include/c++/11/cstdio:
 
 /usr/include/c++/11/bits/std_abs.h:
 
-/usr/include/c++/11/cwctype:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
-
 /usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/select2.h:
 
 /usr/include/c++/11/cctype:
 
@@ -403,8 +392,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar2.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
@@ -437,8 +424,6 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
@@ -576,6 +561,8 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 /usr/include/c++/11/iosfwd:
 
+../include/mutex.h:
+
 /usr/include/c++/11/debug/debug.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
@@ -612,6 +599,10 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 /usr/include/c++/11/type_traits:
 
+/usr/include/c++/11/atomic:
+
+/usr/include/semaphore.h:
+
 /usr/include/c++/11/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
@@ -644,15 +635,15 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/locale.h:
 
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
 /usr/include/x86_64-linux-gnu/sys/syscall.h:
 
 /usr/include/c++/11/iostream:
 
-/usr/include/c++/11/backward/binders.h:
-
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/c++/11/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 

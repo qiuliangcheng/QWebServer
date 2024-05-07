@@ -1,4 +1,5 @@
 #include "thread.h"
+#include "qlc_log.h"
 namespace qlc{
 static thread_local Thread* t_thread = nullptr;//每个线程的这个值是不一样的
 static thread_local std::string t_thread_name = "UNKNOW";
@@ -37,7 +38,7 @@ void Thread::join() {
 
 Thread::Thread(std::function<void()> cb, const std::string& name)
     :m_cb(cb)
-    ,m_name(name) {
+    ,m_name(name){
     if(name.empty()) {
         m_name = "UNKNOW";
     }
@@ -47,7 +48,7 @@ Thread::Thread(std::function<void()> cb, const std::string& name)
             << " name=" << name;
         throw std::logic_error("pthread_create error");
     }
-
+    m_semaphore.wait();
 }
 void* Thread::run(void* arg) {
     Thread* thread = (Thread*)arg;
@@ -58,23 +59,16 @@ void* Thread::run(void* arg) {
 
     std::function<void()> cb;
     cb.swap(thread->m_cb);
+    thread->m_semaphore.notify();//这样就是如果初始化完成 那线程肯定运行起来了 不然可能出现 函数运行但是类的初始化还没完成
     cb();
     return 0;
 }
-
+ 
 
 Thread::~Thread() {
     if(m_thread) {
         pthread_detach(m_thread);
     }
 }
-
-
-
-
-
-
-
-
 
 }

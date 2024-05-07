@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8)
 project(qlc)
 set(CMAKE_VERBOSE_MAKEFILE ON)
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
-
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+#编译优化如果加了的话多线程得不到预期的结果 比如我不加锁 他的到的还是正确的结果
 include_directories(/usr/local/include)
 include_directories(./include)
 set(LIB_SRC
@@ -10,6 +10,7 @@ set(LIB_SRC
     src/util.cpp
     src/config.cpp
     src/thread.cpp
+    src/mutex.cpp
     )
 
 find_library(YAMLCPP yaml-cpp)
