@@ -424,6 +424,7 @@ void LogFormatter::init()//日志格式定义
         if((i+1)<m_pattern.size()){
             if(m_pattern[i+1]=='%'){
                 nstr.append(1,'%');
+                i++;
                 continue;
             }
         }

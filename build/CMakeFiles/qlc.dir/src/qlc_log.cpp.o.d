@@ -187,14 +187,14 @@ CMakeFiles/qlc.dir/src/qlc_log.cpp.o: /home/qlc/webserver/src/qlc_log.cpp \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /usr/include/x86_64-linux-gnu/bits/syscall.h \
+ /usr/include/x86_64-linux-gnu/bits/syscall.h /usr/include/string.h \
+ /usr/include/strings.h /home/qlc/webserver/./include/qlc_log.h \
  /home/qlc/webserver/./include/singleton.h \
  /home/qlc/webserver/./include/thread.h \
  /home/qlc/webserver/./include/mutex.h /usr/include/c++/11/functional \
  /usr/include/c++/11/bits/std_function.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /usr/include/c++/11/atomic /usr/include/string.h /usr/include/strings.h \
- /home/qlc/webserver/./include/config.h \
+ /usr/include/c++/11/atomic /home/qlc/webserver/./include/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -731,7 +731,6 @@ CMakeFiles/qlc.dir/src/qlc_log.cpp.o: /home/qlc/webserver/src/qlc_log.cpp \
  /usr/include/boost/math/tools/real_cast.hpp \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /home/qlc/webserver/./include/qlc_log.h \
  /usr/include/c++/11/unordered_set /usr/include/c++/11/bits/hashtable.h \
  /usr/include/c++/11/bits/hashtable_policy.h \
  /usr/include/c++/11/bits/enable_special_members.h \

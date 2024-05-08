@@ -234,6 +234,9 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
   /usr/include/x86_64-linux-gnu/asm/unistd.h \
   /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  ../include/qlc_log.h \
   ../include/singleton.h \
   ../include/thread.h \
   ../include/mutex.h \
@@ -246,6 +249,8 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 
 
 ../include/singleton.h:
+
+/usr/include/string.h:
 
 /usr/include/x86_64-linux-gnu/asm/unistd.h:
 
@@ -696,6 +701,8 @@ CMakeFiles/test_thread.dir/test/test_thread.cpp.o: ../test/test_thread.cpp \
 /usr/include/c++/11/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/11/cstdlib:
+
+/usr/include/strings.h:
 
 /usr/include/c++/11/bits/sstream.tcc:
 

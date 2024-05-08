@@ -187,6 +187,7 @@ CMakeFiles/qlc.dir/src/thread.cpp.o: /home/qlc/webserver/src/thread.cpp \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
- /usr/include/x86_64-linux-gnu/bits/syscall.h \
+ /usr/include/x86_64-linux-gnu/bits/syscall.h /usr/include/string.h \
+ /usr/include/strings.h /home/qlc/webserver/./include/qlc_log.h \
  /home/qlc/webserver/./include/singleton.h \
  /home/qlc/webserver/./include/thread.h

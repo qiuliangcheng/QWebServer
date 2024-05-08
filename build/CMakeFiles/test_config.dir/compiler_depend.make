@@ -234,6 +234,9 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
   /usr/include/x86_64-linux-gnu/asm/unistd.h \
   /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
   /usr/include/x86_64-linux-gnu/bits/syscall.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  ../include/qlc_log.h \
   ../include/singleton.h \
   ../include/thread.h \
   ../include/mutex.h \
@@ -512,8 +515,6 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
   /usr/include/boost/range/detail/implementation_help.hpp \
   /usr/include/boost/range/detail/common.hpp \
   /usr/include/boost/range/detail/sfinae.hpp \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/boost/range/size.hpp \
   /usr/include/boost/range/size_type.hpp \
   /usr/include/boost/range/difference_type.hpp \
@@ -864,7 +865,6 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
   /usr/include/boost/integer.hpp \
   /usr/include/boost/integer_fwd.hpp \
   /usr/include/boost/detail/basic_pointerbuf.hpp \
-  ../include/qlc_log.h \
   /usr/include/c++/11/unordered_set \
   /usr/include/c++/11/bits/hashtable.h \
   /usr/include/c++/11/bits/hashtable_policy.h \
@@ -1326,7 +1326,7 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 
 ../include/singleton.h:
 
-/usr/include/c++/11/bits/stl_set.h:
+/usr/include/string.h:
 
 /usr/include/boost/range/algorithm/equal.hpp:
 
@@ -1465,8 +1465,6 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 /usr/include/c++/11/bits/atomic_lockfree_defines.h:
 
 /usr/include/boost/preprocessor/logical/and.hpp:
-
-/usr/include/string.h:
 
 /usr/include/boost/range/end.hpp:
 
@@ -1780,12 +1778,6 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
-
-/usr/local/include/yaml-cpp/node/detail/node_iterator.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
-
 /usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /usr/include/boost/mpl/aux_/lambda_arity_param.hpp:
@@ -2018,6 +2010,8 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 
 /usr/include/c++/11/cstdlib:
 
+/usr/include/strings.h:
+
 /usr/include/x86_64-linux-gnu/bits/semaphore.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
@@ -2079,6 +2073,14 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 /usr/include/c++/11/bits/cxxabi_forced.h:
 
 /usr/local/include/yaml-cpp/ostream_wrapper.h:
+
+/usr/include/c++/11/bits/stl_set.h:
+
+/usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
+
+/usr/local/include/yaml-cpp/node/detail/node_iterator.h:
 
 /usr/local/include/yaml-cpp/mark.h:
 
@@ -2561,8 +2563,6 @@ CMakeFiles/test_config.dir/test/test_config.cpp.o: ../test/test_config.cpp \
 /usr/include/boost/range/detail/msvc_has_iterator_workaround.hpp:
 
 /usr/include/boost/range/const_iterator.hpp:
-
-/usr/include/strings.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 

@@ -36,13 +36,13 @@
     if(logger->getLevel() <= level) \
         qlc::LogEventWrap(qlc::LogEvent::ptr(new qlc::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, qlc::GetThreadId(),\
-                qlc::GetFiberId(), time(0)))).getEvent()->format(fmt, __VA_ARGS__)
+                qlc::GetFiberId(), time(0)))).getEvent()->format(fmt, ##__VA_ARGS__)
 
-#define QLC_LOG_FMT_DEBUG(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::DEBUG, fmt, __VA_ARGS__)
-#define QLC_LOG_FMT_INFO(logger, fmt, ...)  QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::INFO, fmt, __VA_ARGS__)
-#define QLC_LOG_FMT_WARN(logger, fmt, ...)  QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::WARN, fmt, __VA_ARGS__)
-#define QLC_LOG_FMT_ERROR(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::ERROR, fmt, __VA_ARGS__)
-#define QLC_LOG_FMT_FATAL(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::FATAL, fmt, __VA_ARGS__)
+#define QLC_LOG_FMT_DEBUG(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::DEBUG, fmt, ##__VA_ARGS__)
+#define QLC_LOG_FMT_INFO(logger, fmt, ...)  QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::INFO, fmt, ##__VA_ARGS__)
+#define QLC_LOG_FMT_WARN(logger, fmt, ...)  QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::WARN, fmt, ##__VA_ARGS__)
+#define QLC_LOG_FMT_ERROR(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::ERROR, fmt, ##__VA_ARGS__)
+#define QLC_LOG_FMT_FATAL(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::FATAL, fmt, ##__VA_ARGS__)
 
 #define QLC_LOG_ROOT()  qlc::Loggermgr::GetInstanceX()->getRoot()
 #define QLC_LOG_NAME(name) qlc::Loggermgr::GetInstanceX()->getLogger(name)

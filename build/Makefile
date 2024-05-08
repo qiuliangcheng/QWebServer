@@ -171,6 +171,19 @@ test_thread/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
 .PHONY : test_thread/fast
 
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -363,6 +376,30 @@ test/test_thread.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/test/test_thread.cpp.s
 .PHONY : test/test_thread.cpp.s
 
+test/test_util.o: test/test_util.cpp.o
+.PHONY : test/test_util.o
+
+# target to build an object file
+test/test_util.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test/test_util.cpp.o
+.PHONY : test/test_util.cpp.o
+
+test/test_util.i: test/test_util.cpp.i
+.PHONY : test/test_util.i
+
+# target to preprocess a source file
+test/test_util.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test/test_util.cpp.i
+.PHONY : test/test_util.cpp.i
+
+test/test_util.s: test/test_util.cpp.s
+.PHONY : test/test_util.s
+
+# target to generate assembly for a file
+test/test_util.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/test/test_util.cpp.s
+.PHONY : test/test_util.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -375,6 +412,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_thread"
+	@echo "... test_util"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -399,6 +437,9 @@ help:
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"
+	@echo "... test/test_util.o"
+	@echo "... test/test_util.i"
+	@echo "... test/test_util.s"
 .PHONY : help
 
 
