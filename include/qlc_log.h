@@ -18,7 +18,7 @@
     if(logger->getLevel() <= level) \
         qlc::LogEventWrap(qlc::LogEvent::ptr(new qlc::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, qlc::GetThreadId(),\
-                qlc::GetFiberId(), time(0)))).getSS()
+                qlc::GetFiberId(), time(0),qlc::Thread::GetName()))).getSS()
 #define QLC_LOG_DEBUG(logger) QLC_LOG_LEVEL(logger, qlc::LogLevel::DEBUG)
 #define QLC_LOG_INFO(logger) QLC_LOG_LEVEL(logger, qlc::LogLevel::INFO)
 #define QLC_LOG_WARN(logger) QLC_LOG_LEVEL(logger, qlc::LogLevel::WARN)
@@ -36,7 +36,7 @@
     if(logger->getLevel() <= level) \
         qlc::LogEventWrap(qlc::LogEvent::ptr(new qlc::LogEvent(logger, level, \
                         __FILE__, __LINE__, 0, qlc::GetThreadId(),\
-                qlc::GetFiberId(), time(0)))).getEvent()->format(fmt, ##__VA_ARGS__)
+                qlc::GetFiberId(), time(0),qlc::Thread::GetName()))).getEvent()->format(fmt, ##__VA_ARGS__)
 
 #define QLC_LOG_FMT_DEBUG(logger, fmt, ...) QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::DEBUG, fmt, ##__VA_ARGS__)
 #define QLC_LOG_FMT_INFO(logger, fmt, ...)  QLC_LOG_FMT_LEVEL(logger, qlc::LogLevel::INFO, fmt, ##__VA_ARGS__)
@@ -66,13 +66,14 @@ class LogEvent{
 public:
 
     typedef std::shared_ptr<LogEvent> ptr;
-    LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const char* file,int32_t line,uint32_t elapse,uint32_t threadId,uint32_t fiberId,uint64_t time);
+    LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const char* file,int32_t line,uint32_t elapse,uint32_t threadId,uint32_t fiberId,uint64_t time,const std::string& thread_name);
     const char *getFile() const {return m_file;}
     int32_t getLine() const {return m_line;}
     uint32_t getElapse() const {return m_elapse;}
     uint32_t getThreadId() const {return m_threadId;}
     uint32_t getFiberId() const {return m_fiberId;}
     uint64_t getTime() const {return m_time;}
+    const std::string& getThreadName() const { return m_threadName;}
     const std::string getContent() const {return m_ss.str();}
     std::stringstream& getSS() {return m_ss;}
     LogLevel::Level getLevel() const {return m_level;}
@@ -89,6 +90,7 @@ private:
     std::stringstream m_ss;//日志内容
     std::shared_ptr<Logger> m_logger;
     LogLevel::Level m_level;
+    std::string m_threadName;
 
 };
 //主要是为了放event 然后析构  为什么不直接用event的析构 因为那个是智能指针 自己析构了

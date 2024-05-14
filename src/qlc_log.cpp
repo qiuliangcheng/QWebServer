@@ -6,10 +6,11 @@
 
 //首先实现日志器
 namespace qlc{
-    LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const char* file,int32_t line,uint32_t elapse,uint32_t threadId,uint32_t fiberId,uint64_t time):
-        m_file(file),m_line(line),m_elapse(elapse),m_threadId(threadId),m_fiberId(fiberId),m_time(time),m_logger(logger),m_level(level){
-
+    LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const char* file,int32_t line,uint32_t elapse,uint32_t threadId,uint32_t fiberId,uint64_t time, const std::string &thread_name):
+        m_file(file),m_line(line),m_elapse(elapse),m_threadId(threadId),m_fiberId(fiberId),m_time(time),m_logger(logger),m_level(level),m_threadName(thread_name){
     }
+
+
 
     void LogEvent::format(const char *fmt, ...)
     {
@@ -52,7 +53,7 @@ namespace qlc{
 
     Logger::Logger(const std::string &name) : m_name(name), m_level(LogLevel::DEBUG)
     {
-        m_formater.reset(new LogFormatter("%d %f [%p] %l %m %n"));//首先为自己设置一个loggerformatter 防止后面用到append没有设置
+        m_formater.reset(new LogFormatter("%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"));//首先为自己设置一个loggerformatter 防止后面用到append没有设置
     }                                                             //
     void Logger::Log(LogLevel::Level level, const LogEvent::ptr event){
          std::shared_ptr<Logger> sharedThis = shared_from_this();
@@ -297,6 +298,14 @@ void format(std::shared_ptr<Logger> logger,std::ostream &os ,LogLevel::Level lev
             os<<LogLevel::ToString(level);        
     }
 };
+
+class ThreadNameFormatItem : public LogFormatter::FormatItem{
+public:
+ThreadNameFormatItem(const std::string &fmt=""){}
+void format(std::shared_ptr<Logger> logger,std::ostream &os ,LogLevel::Level level,LogEvent::ptr event) override{
+            os<<event->getThreadName();        
+    }
+};
 class ElapseFormatItem : public LogFormatter::FormatItem{
 public:
 ElapseFormatItem(const std::string &fmt=""){}
@@ -507,7 +516,9 @@ void LogFormatter::init()//日志格式定义
         AA(f,FileNameFormatItem),
         AA(l,LineFormatItem),
         AA(T,TabFormatItem),
-        AA(F,FiberIdFormatItem)
+        AA(F,FiberIdFormatItem),
+        AA(N,ThreadNameFormatItem)
+
 #undef AA
    };
 //    for(auto &i:s_format_item){

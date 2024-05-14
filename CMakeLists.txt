@@ -11,6 +11,7 @@ set(LIB_SRC
     src/config.cpp
     src/thread.cpp
     src/mutex.cpp
+    src/fiber.cpp
     )
 
 find_library(YAMLCPP yaml-cpp)
@@ -36,5 +37,9 @@ target_link_libraries(test_thread qlc ${LIB_QLC})
 add_executable(test_util test/test_util.cpp)
 # add_dependencies(test_thread qlc)
 target_link_libraries(test_util qlc ${LIB_QLC})
+
+add_executable(test_fiber test/test_fiber.cpp)
+# add_dependencies(test_thread qlc)
+target_link_libraries(test_fiber qlc ${LIB_QLC})
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

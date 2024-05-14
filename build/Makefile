@@ -184,6 +184,19 @@ test_util/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
 .PHONY : test_util/fast
 
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -207,6 +220,30 @@ src/config.s: src/config.cpp.s
 src/config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
+
+src/fiber.o: src/fiber.cpp.o
+.PHONY : src/fiber.o
+
+# target to build an object file
+src/fiber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fiber.cpp.o
+.PHONY : src/fiber.cpp.o
+
+src/fiber.i: src/fiber.cpp.i
+.PHONY : src/fiber.i
+
+# target to preprocess a source file
+src/fiber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fiber.cpp.i
+.PHONY : src/fiber.cpp.i
+
+src/fiber.s: src/fiber.cpp.s
+.PHONY : src/fiber.s
+
+# target to generate assembly for a file
+src/fiber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fiber.cpp.s
+.PHONY : src/fiber.cpp.s
 
 src/mutex.o: src/mutex.cpp.o
 .PHONY : src/mutex.o
@@ -352,6 +389,30 @@ test/test_config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/test/test_config.cpp.s
 .PHONY : test/test_config.cpp.s
 
+test/test_fiber.o: test/test_fiber.cpp.o
+.PHONY : test/test_fiber.o
+
+# target to build an object file
+test/test_fiber.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o
+.PHONY : test/test_fiber.cpp.o
+
+test/test_fiber.i: test/test_fiber.cpp.i
+.PHONY : test/test_fiber.i
+
+# target to preprocess a source file
+test/test_fiber.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.i
+.PHONY : test/test_fiber.cpp.i
+
+test/test_fiber.s: test/test_fiber.cpp.s
+.PHONY : test/test_fiber.s
+
+# target to generate assembly for a file
+test/test_fiber.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.s
+.PHONY : test/test_fiber.cpp.s
+
 test/test_thread.o: test/test_thread.cpp.o
 .PHONY : test/test_thread.o
 
@@ -411,11 +472,15 @@ help:
 	@echo "... qlc"
 	@echo "... test"
 	@echo "... test_config"
+	@echo "... test_fiber"
 	@echo "... test_thread"
 	@echo "... test_util"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/fiber.o"
+	@echo "... src/fiber.i"
+	@echo "... src/fiber.s"
 	@echo "... src/mutex.o"
 	@echo "... src/mutex.i"
 	@echo "... src/mutex.s"
@@ -434,6 +499,9 @@ help:
 	@echo "... test/test_config.o"
 	@echo "... test/test_config.i"
 	@echo "... test/test_config.s"
+	@echo "... test/test_fiber.o"
+	@echo "... test/test_fiber.i"
+	@echo "... test/test_fiber.s"
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"
