@@ -5,5 +5,6 @@
 #include "macro.h"
 #include "thread.h"
 #include "fiber.h"
+#include "schedular.h"
 
 #endif

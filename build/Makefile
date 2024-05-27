@@ -197,6 +197,19 @@ test_fiber/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
 .PHONY : test_fiber/fast
 
+#=============================================================================
+# Target rules for targets named test_schedular
+
+# Build rule for target.
+test_schedular: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_schedular
+.PHONY : test_schedular
+
+# fast build rule for target.
+test_schedular/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/build
+.PHONY : test_schedular/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -292,6 +305,30 @@ src/qlc_log.s: src/qlc_log.cpp.s
 src/qlc_log.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/qlc_log.cpp.s
 .PHONY : src/qlc_log.cpp.s
+
+src/schedular.o: src/schedular.cpp.o
+.PHONY : src/schedular.o
+
+# target to build an object file
+src/schedular.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/schedular.cpp.o
+.PHONY : src/schedular.cpp.o
+
+src/schedular.i: src/schedular.cpp.i
+.PHONY : src/schedular.i
+
+# target to preprocess a source file
+src/schedular.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/schedular.cpp.i
+.PHONY : src/schedular.cpp.i
+
+src/schedular.s: src/schedular.cpp.s
+.PHONY : src/schedular.s
+
+# target to generate assembly for a file
+src/schedular.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/schedular.cpp.s
+.PHONY : src/schedular.cpp.s
 
 src/thread.o: src/thread.cpp.o
 .PHONY : src/thread.o
@@ -413,6 +450,30 @@ test/test_fiber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.s
 .PHONY : test/test_fiber.cpp.s
 
+test/test_schedular.o: test/test_schedular.cpp.o
+.PHONY : test/test_schedular.o
+
+# target to build an object file
+test/test_schedular.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/test/test_schedular.cpp.o
+.PHONY : test/test_schedular.cpp.o
+
+test/test_schedular.i: test/test_schedular.cpp.i
+.PHONY : test/test_schedular.i
+
+# target to preprocess a source file
+test/test_schedular.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/test/test_schedular.cpp.i
+.PHONY : test/test_schedular.cpp.i
+
+test/test_schedular.s: test/test_schedular.cpp.s
+.PHONY : test/test_schedular.s
+
+# target to generate assembly for a file
+test/test_schedular.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/test/test_schedular.cpp.s
+.PHONY : test/test_schedular.cpp.s
+
 test/test_thread.o: test/test_thread.cpp.o
 .PHONY : test/test_thread.o
 
@@ -473,6 +534,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_schedular"
 	@echo "... test_thread"
 	@echo "... test_util"
 	@echo "... src/config.o"
@@ -487,6 +549,9 @@ help:
 	@echo "... src/qlc_log.o"
 	@echo "... src/qlc_log.i"
 	@echo "... src/qlc_log.s"
+	@echo "... src/schedular.o"
+	@echo "... src/schedular.i"
+	@echo "... src/schedular.s"
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
@@ -502,6 +567,9 @@ help:
 	@echo "... test/test_fiber.o"
 	@echo "... test/test_fiber.i"
 	@echo "... test/test_fiber.s"
+	@echo "... test/test_schedular.o"
+	@echo "... test/test_schedular.i"
+	@echo "... test/test_schedular.s"
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"

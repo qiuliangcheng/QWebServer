@@ -2,6 +2,7 @@
 #include "qlc_log.h"
 #include "config.h"
 #include "macro.h"
+#include "schedular.h"
 namespace qlc{
     static Logger::ptr g_logger=QLC_LOG_NAME("system");\
     //静态变量 静态方法里调用
@@ -45,7 +46,7 @@ Fiber::Fiber() { //创建主线程
     QLC_LOG_DEBUG(g_logger) << "Fiber::Fiber main";
 }
 
-Fiber::Fiber(std::function<void()> cb, size_t stack_size):m_id(++s_fiber_id)
+Fiber::Fiber(std::function<void()> cb, size_t stack_size,bool use_caller):m_id(++s_fiber_id)
                                                           ,m_cb(cb)
 {
     ++s_fiber_count;
@@ -57,7 +58,12 @@ Fiber::Fiber(std::function<void()> cb, size_t stack_size):m_id(++s_fiber_id)
     m_ctx.uc_link=nullptr;
     m_ctx.uc_stack.ss_sp=m_stack;
     m_ctx.uc_stack.ss_size=m_stacksize;
-    makecontext(&m_ctx,&Fiber::MainFunc,0);
+    if(!use_caller){
+        makecontext(&m_ctx,&Fiber::MainFunc,0);
+    }else{
+        makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
+    }
+
     QLC_LOG_DEBUG(g_logger) << "Fiber::Fiber id= " <<m_id;
 }
 
@@ -143,11 +149,18 @@ void Fiber::swapIn()
     SetThis(this);
     QLC_ASSERT(m_state != EXEC);
     m_state = EXEC;
-    if(swapcontext(&t_threadFiber->m_ctx, &m_ctx)) {
+    if(swapcontext(&Schedular::GetMainFiber()->m_ctx, &m_ctx)) {
         QLC_ASSERT2(false, "swapcontext");
     }
 }
 void Fiber::swapOut() {
+    SetThis(Schedular::GetMainFiber());
+    if(swapcontext(&m_ctx, &Schedular::GetMainFiber()->m_ctx)) {
+        QLC_ASSERT2(false, "swapcontext");
+    }
+}
+void Fiber::back()
+{
     SetThis(t_threadFiber.get());
     if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
         QLC_ASSERT2(false, "swapcontext");
@@ -175,4 +188,26 @@ void Fiber::MainFunc()
     raw->swapOut();
     QLC_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw->getId()));}
 
+void Fiber::CallerMainFunc()
+{
+    Fiber::ptr cur=GetThis();
+    QLC_ASSERT(cur);
+    try{
+        cur->m_cb();
+        cur->m_cb=nullptr;
+        cur->m_state=TERM;
+    }catch(std::exception& ex){
+        cur->m_state=EXCEPT;
+        QLC_LOG_ERROR(g_logger) << "Fiber Except: " << ex.what()
+            << " fiber_id=" << cur->getId()
+            << std::endl
+            << qlc::BacktraceToString();
+    }
+
+    //如果不写下面这些的话 运行完了后不回主协程
+    auto raw =cur.get();
+    cur.reset();
+    raw->back();
+    QLC_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw->getId()));
+}
 }

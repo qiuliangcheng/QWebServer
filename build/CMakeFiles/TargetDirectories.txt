@@ -4,5 +4,6 @@
 /home/qlc/webserver/build/CMakeFiles/test_thread.dir
 /home/qlc/webserver/build/CMakeFiles/test_util.dir
 /home/qlc/webserver/build/CMakeFiles/test_fiber.dir
+/home/qlc/webserver/build/CMakeFiles/test_schedular.dir
 /home/qlc/webserver/build/CMakeFiles/edit_cache.dir
 /home/qlc/webserver/build/CMakeFiles/rebuild_cache.dir

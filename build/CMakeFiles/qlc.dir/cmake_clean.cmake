@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/qlc.dir/src/mutex.cpp.o.d"
   "CMakeFiles/qlc.dir/src/qlc_log.cpp.o"
   "CMakeFiles/qlc.dir/src/qlc_log.cpp.o.d"
+  "CMakeFiles/qlc.dir/src/schedular.cpp.o"
+  "CMakeFiles/qlc.dir/src/schedular.cpp.o.d"
   "CMakeFiles/qlc.dir/src/thread.cpp.o"
   "CMakeFiles/qlc.dir/src/thread.cpp.o.d"
   "CMakeFiles/qlc.dir/src/util.cpp.o"
