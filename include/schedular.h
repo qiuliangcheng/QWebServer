@@ -95,16 +95,17 @@ protected:
     virtual bool stopping();//返回是否可以停止
     virtual void idle();//线程没有任务的时候 执行空闲协程 运行的空闲任务
     void setThis();//设置当前协程调度器
-
+    bool hasIdleThreads() { return m_idleThreadCount > 0;}
 
 private:
-    std::string m_name;
+    
     MutexType m_mutex;
     std::vector<Thread::ptr> m_threads;
     Fiber::ptr m_rootFiber;//使用主线程时候 用来跑run方法的协程
     std::list<FiberAndThread> m_fibers;
 
 protected:
+    std::string m_name;
     std::vector<int> m_threadIds;//一个协程下用了几个线程id
     size_t m_threadCount = 0;//线程数量
     std::atomic<size_t>  m_activeThreadCount = {0};

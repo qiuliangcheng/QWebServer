@@ -210,6 +210,19 @@ test_schedular/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/build
 .PHONY : test_schedular/fast
 
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -257,6 +270,30 @@ src/fiber.s: src/fiber.cpp.s
 src/fiber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fiber.cpp.s
 .PHONY : src/fiber.cpp.s
+
+src/iomanager.o: src/iomanager.cpp.o
+.PHONY : src/iomanager.o
+
+# target to build an object file
+src/iomanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/iomanager.cpp.o
+.PHONY : src/iomanager.cpp.o
+
+src/iomanager.i: src/iomanager.cpp.i
+.PHONY : src/iomanager.i
+
+# target to preprocess a source file
+src/iomanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/iomanager.cpp.i
+.PHONY : src/iomanager.cpp.i
+
+src/iomanager.s: src/iomanager.cpp.s
+.PHONY : src/iomanager.s
+
+# target to generate assembly for a file
+src/iomanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/iomanager.cpp.s
+.PHONY : src/iomanager.cpp.s
 
 src/mutex.o: src/mutex.cpp.o
 .PHONY : src/mutex.o
@@ -354,6 +391,30 @@ src/thread.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/thread.cpp.s
 .PHONY : src/thread.cpp.s
 
+src/timer.o: src/timer.cpp.o
+.PHONY : src/timer.o
+
+# target to build an object file
+src/timer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/timer.cpp.o
+.PHONY : src/timer.cpp.o
+
+src/timer.i: src/timer.cpp.i
+.PHONY : src/timer.i
+
+# target to preprocess a source file
+src/timer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/timer.cpp.i
+.PHONY : src/timer.cpp.i
+
+src/timer.s: src/timer.cpp.s
+.PHONY : src/timer.s
+
+# target to generate assembly for a file
+src/timer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/timer.cpp.s
+.PHONY : src/timer.cpp.s
+
 src/util.o: src/util.cpp.o
 .PHONY : src/util.o
 
@@ -450,6 +511,30 @@ test/test_fiber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.s
 .PHONY : test/test_fiber.cpp.s
 
+test/test_iomanager.o: test/test_iomanager.cpp.o
+.PHONY : test/test_iomanager.o
+
+# target to build an object file
+test/test_iomanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o
+.PHONY : test/test_iomanager.cpp.o
+
+test/test_iomanager.i: test/test_iomanager.cpp.i
+.PHONY : test/test_iomanager.i
+
+# target to preprocess a source file
+test/test_iomanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.i
+.PHONY : test/test_iomanager.cpp.i
+
+test/test_iomanager.s: test/test_iomanager.cpp.s
+.PHONY : test/test_iomanager.s
+
+# target to generate assembly for a file
+test/test_iomanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.s
+.PHONY : test/test_iomanager.cpp.s
+
 test/test_schedular.o: test/test_schedular.cpp.o
 .PHONY : test/test_schedular.o
 
@@ -534,6 +619,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_iomanager"
 	@echo "... test_schedular"
 	@echo "... test_thread"
 	@echo "... test_util"
@@ -543,6 +629,9 @@ help:
 	@echo "... src/fiber.o"
 	@echo "... src/fiber.i"
 	@echo "... src/fiber.s"
+	@echo "... src/iomanager.o"
+	@echo "... src/iomanager.i"
+	@echo "... src/iomanager.s"
 	@echo "... src/mutex.o"
 	@echo "... src/mutex.i"
 	@echo "... src/mutex.s"
@@ -555,6 +644,9 @@ help:
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
+	@echo "... src/timer.o"
+	@echo "... src/timer.i"
+	@echo "... src/timer.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"
@@ -567,6 +659,9 @@ help:
 	@echo "... test/test_fiber.o"
 	@echo "... test/test_fiber.i"
 	@echo "... test/test_fiber.s"
+	@echo "... test/test_iomanager.o"
+	@echo "... test/test_iomanager.i"
+	@echo "... test/test_iomanager.s"
 	@echo "... test/test_schedular.o"
 	@echo "... test/test_schedular.i"
 	@echo "... test/test_schedular.s"

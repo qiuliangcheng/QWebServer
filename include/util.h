@@ -17,6 +17,8 @@ namespace qlc{
     //将栈信息保存再bt数组里 size 是能返回的最大的栈的数量 
     void Backtrace(std::vector<std::string>& bt, int size = 64, int skip = 1);
     std::string BacktraceToString(int size = 64, int skip = 2, const std::string& prefix = "");
+    uint64_t GetCurrentMS();
+    uint64_t GetCurrentUS();
 
 }
 

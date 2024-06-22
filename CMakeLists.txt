@@ -13,6 +13,8 @@ set(LIB_SRC
     src/mutex.cpp
     src/fiber.cpp
     src/schedular.cpp
+    src/iomanager.cpp
+    src/timer.cpp
     )
 
 find_library(YAMLCPP yaml-cpp)
@@ -47,5 +49,9 @@ add_executable(test_schedular test/test_schedular.cpp)
 # add_dependencies(test_thread qlc)
 target_link_libraries(test_schedular qlc ${LIB_QLC})
 
+
+add_executable(test_iomanager test/test_iomanager.cpp)
+# add_dependencies(test_thread qlc)
+target_link_libraries(test_iomanager qlc ${LIB_QLC})
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

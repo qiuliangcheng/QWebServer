@@ -7,7 +7,7 @@ static thread_local Schedular* t_schedular = nullptr;
 static thread_local Fiber* t_schedular_fiber = nullptr;
 
 
-Schedular::Schedular(size_t threads, bool use_caller, const std::string &name)
+Schedular::Schedular(size_t threads, bool use_caller, const std::string &name):m_name(name)
 {
     if(use_caller){
         QLC_ASSERT(threads > 0);
@@ -22,6 +22,8 @@ Schedular::Schedular(size_t threads, bool use_caller, const std::string &name)
         m_threadIds.push_back(m_rootThread);
     }
     else{
+        // t_schedular=this;
+        // std::cout<<"构造函数： "<<t_schedular<<std::endl;
         m_rootThread=-1;
     }
     m_threadCount=threads;
@@ -73,6 +75,7 @@ void Schedular::stop()
     if(m_rootThread != -1) { //用主线程
         QLC_ASSERT(GetThis() == this);
     } else {
+        //  std::cout<<"析构函数： "<<this<<"   "<<GetThis()<<std::endl;
         QLC_ASSERT(GetThis() != this);
     }
     m_stopping = true;
@@ -99,6 +102,7 @@ void Schedular::stop()
 void Schedular::run()
 {
     setThis();
+    std::cout<<"线程函数:  "<<t_schedular<<std::endl;
     if(qlc::GetThreadId()!=m_rootThread){ //不是主线程的协程跑的
         t_schedular_fiber=Fiber::GetThis().get();
     }
@@ -115,6 +119,7 @@ void Schedular::run()
             auto it = m_fibers.begin();
             while(it != m_fibers.end()) {
                 if(it->thread != -1 && it->thread != qlc::GetThreadId()) { //不是所有线程都可以跑的话也不是当前要跑的线程就继续
+                //  QLC_LOG_INFO(g_logger) << "进来这里了: "<<it->thread;
                     ++it;
                     tickle_me = true;
                     continue;
@@ -130,9 +135,12 @@ void Schedular::run()
                 is_active=true;
                 break;
             }
-            tickle_me |= it != m_fibers.end();//表示取出了一个可用的协程
+            
+            tickle_me |= (it != m_fibers.end());//表示取出了一个可用的协程
         }
         if(tickle_me){
+            // QLC_LOG_INFO(g_logger) << "tickle_me的值为"<<tickle_me<<"  "<<"m_fiber的数量是："<<m_fibers.size()<<" "<<is_active;
+            // QLC_LOG_INFO(g_logger) << "我正在通知";
             tickle();
         }
         if(ft.fiber && (ft.fiber->getState() != Fiber::TERM&& ft.fiber->getState() != Fiber::EXCEPT)){
@@ -167,6 +175,7 @@ void Schedular::run()
                 cb_fiber.reset();
             }
         }else{
+            
             if(is_active) {
                 --m_activeThreadCount; //说明是判断有问题了
                 continue;
@@ -175,7 +184,7 @@ void Schedular::run()
                 QLC_LOG_INFO(g_logger) << "idle fiber term";
                 break;//说明空闲的协程都跑完了  也说明++m_idleThreadCount;已经要停止了
             }
-            ++m_idleThreadCount; 
+            ++m_idleThreadCount; //这个是说明有哪几个线程正在运行空闲协程
             idle_fiber->swapIn();//这个空闲协程里面跑的是返回hold状态 
             --m_idleThreadCount;
             if(idle_fiber->getState() != Fiber::TERM
@@ -201,6 +210,7 @@ void Schedular::idle() {
     while(!stopping()) {
         qlc::Fiber::YieldToHold();
     }
+    
 }
 bool Schedular::stopping() {
     MutexType::Lock lock(m_mutex);
