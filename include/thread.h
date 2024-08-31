@@ -1,9 +1,9 @@
 #ifndef __QLC_THREAD_H
 #define __QLC_THREAD_H
 #include "mutex.h"
-
+#include "noncopyable.h"
 namespace qlc{
-class Thread{
+class Thread : public Noncopyable{
 public:
     typedef std::shared_ptr<Thread> ptr;
     Thread(std::function<void()> cb, const std::string& name);
@@ -15,9 +15,6 @@ public:
     static const std::string& GetName();//获取当前线程的名称
     static void SetName(const std::string& name);
 private:
-    Thread(const Thread&)=delete;
-    Thread(const Thread&&)=delete;
-    Thread operator=(const Thread&)=delete;
     static void* run(void* arg);//在使用 pthread 线程库时，线程函数必须是静态的或是全局函数，
     //而不能是类的成员函数。这是因为线程函数需要与 pthread 线程库的 C 接口兼容。
 private:

@@ -1,6 +1,7 @@
 #include "schedular.h"
 #include "qlc_log.h"
 #include "macro.h"
+#include "hook.h"
 namespace qlc{
 static Logger::ptr g_logger=QLC_LOG_NAME("system");
 static thread_local Schedular* t_schedular = nullptr;
@@ -102,6 +103,7 @@ void Schedular::stop()
 void Schedular::run()
 {
     setThis();
+    set_hook_enable(true);
     std::cout<<"线程函数:  "<<t_schedular<<std::endl;
     if(qlc::GetThreadId()!=m_rootThread){ //不是主线程的协程跑的
         t_schedular_fiber=Fiber::GetThis().get();
@@ -119,7 +121,7 @@ void Schedular::run()
             auto it = m_fibers.begin();
             while(it != m_fibers.end()) {
                 if(it->thread != -1 && it->thread != qlc::GetThreadId()) { //不是所有线程都可以跑的话也不是当前要跑的线程就继续
-                //  QLC_LOG_INFO(g_logger) << "进来这里了: "<<it->thread;
+                  //QLC_LOG_INFO(g_logger) << "进来这里了: "<<it->thread;
                     ++it;
                     tickle_me = true;
                     continue;
@@ -156,6 +158,7 @@ void Schedular::run()
             }
             ft.reset();
         }else if(ft.cb){
+            
             if(cb_fiber) {
                 cb_fiber->reset(ft.cb);
             } else {
@@ -163,6 +166,7 @@ void Schedular::run()
             }
             ft.reset();
             cb_fiber->swapIn();
+            //QLC_LOG_INFO(g_logger) << "进来这里了: ";
             --m_activeThreadCount;
             if(cb_fiber->getState() == Fiber::READY) {
                 schedule(cb_fiber);

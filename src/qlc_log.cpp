@@ -165,6 +165,7 @@ namespace qlc{
 }
 LogLevel::Level LogLevel::FromString(const std::string &str)
 {
+//#号是一个预处理运算符，它被称为字符串化运算符（stringification operator）。#号的作用是将宏参数转换为字符串字面量
 #define XX(level,m_str) \
     if(str==#m_str) \
     {return LogLevel::level;}

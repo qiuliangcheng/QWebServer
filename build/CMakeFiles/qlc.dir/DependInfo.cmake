@@ -9,7 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/qlc/webserver/src/config.cpp" "CMakeFiles/qlc.dir/src/config.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/config.cpp.o.d"
+  "/home/qlc/webserver/src/fd_manager.cpp" "CMakeFiles/qlc.dir/src/fd_manager.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/fd_manager.cpp.o.d"
   "/home/qlc/webserver/src/fiber.cpp" "CMakeFiles/qlc.dir/src/fiber.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/fiber.cpp.o.d"
+  "/home/qlc/webserver/src/hook.cpp" "CMakeFiles/qlc.dir/src/hook.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/hook.cpp.o.d"
   "/home/qlc/webserver/src/iomanager.cpp" "CMakeFiles/qlc.dir/src/iomanager.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/iomanager.cpp.o.d"
   "/home/qlc/webserver/src/mutex.cpp" "CMakeFiles/qlc.dir/src/mutex.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/mutex.cpp.o.d"
   "/home/qlc/webserver/src/qlc_log.cpp" "CMakeFiles/qlc.dir/src/qlc_log.cpp.o" "gcc" "CMakeFiles/qlc.dir/src/qlc_log.cpp.o.d"

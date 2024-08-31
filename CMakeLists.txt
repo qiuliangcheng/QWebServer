@@ -15,13 +15,16 @@ set(LIB_SRC
     src/schedular.cpp
     src/iomanager.cpp
     src/timer.cpp
+    src/hook.cpp
+    src/fd_manager.cpp
     )
 
 find_library(YAMLCPP yaml-cpp)
 find_library(PTHREAD pthread)
 add_library(qlc SHARED ${LIB_SRC})
 set(LIB_QLC 
-    qlc 
+    qlc
+    dl 
     ${YAMLCPP} 
     ${PTHREAD}
 )
@@ -53,5 +56,9 @@ target_link_libraries(test_schedular qlc ${LIB_QLC})
 add_executable(test_iomanager test/test_iomanager.cpp)
 # add_dependencies(test_thread qlc)
 target_link_libraries(test_iomanager qlc ${LIB_QLC})
+
+add_executable(test_hook test/test_hook.cpp)
+# add_dependencies(test_thread qlc)
+target_link_libraries(test_hook qlc ${LIB_QLC})
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

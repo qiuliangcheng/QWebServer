@@ -164,6 +164,7 @@ CMakeFiles/qlc.dir/src/thread.cpp.o: /home/qlc/webserver/src/thread.cpp \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc \
+ /home/qlc/webserver/./include/noncopyable.h \
  /home/qlc/webserver/./include/qlc_log.h /usr/include/c++/11/list \
  /usr/include/c++/11/bits/stl_list.h /usr/include/c++/11/bits/list.tcc \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \

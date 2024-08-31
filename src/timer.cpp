@@ -20,7 +20,7 @@ bool Timer::Comparator::operator()(const Timer::ptr &lf,const Timer::ptr &rg) co
     }
     if(lf->m_next>rg->m_next){
         return false;
-    }
+    } 
     return lf.get()<rg.get();//比较地址了
 }
 
@@ -82,7 +82,7 @@ bool Timer::reset(uint64_t ms, bool from_now)
     } else {
         start = m_next - m_ms;
     }
-    m_ms=ms;
+    m_ms=ms;                                                                                           
     m_next=start+m_ms;
     m_manager->addTimer(shared_from_this(),lock);
     return true;
@@ -101,12 +101,15 @@ TimerManager::~TimerManager()
 //这段代码使用了 std::weak_ptr 和 std::shared_ptr 来处理共享资源的生命周期。std::weak_ptr 是一种弱引用，
 //它可以监视 std::shared_ptr 指向的对象，但不会增加该对象的引用计数。通过调用 lock() 函数，可以尝试将 std::weak_ptr 转换为 
 //std::shared_ptr，如果转换成功，就说明资源仍然存在，可以安全地使用。
+//void  可以指向任意对象类型
 static void OnTimer(std::weak_ptr<void> weak_cond, std::function<void()> cb) {
     std::shared_ptr<void> tmp = weak_cond.lock();// weak_cond 转换为 shared_ptr 类型
     if(tmp) {
         cb();
     }
 }
+
+
 Timer::ptr TimerManager::addTimer(uint64_t ms, std::function<void()> cb, bool recurring)
 {
     Timer::ptr timer(new Timer(ms,cb,recurring,this));
@@ -114,6 +117,8 @@ Timer::ptr TimerManager::addTimer(uint64_t ms, std::function<void()> cb, bool re
     addTimer(timer,lock);
     return timer;
 }
+
+
 //增加条件定时器
 Timer::ptr TimerManager::addConditionTimer(uint64_t ms, std::function<void()> cb, std::weak_ptr<void> weak_cond, bool recurring)
 {

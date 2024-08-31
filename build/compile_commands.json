@@ -46,6 +46,16 @@
 },
 {
   "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/hook.cpp.o -c /home/qlc/webserver/src/hook.cpp",
+  "file": "/home/qlc/webserver/src/hook.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/fd_manager.cpp.o -c /home/qlc/webserver/src/fd_manager.cpp",
+  "file": "/home/qlc/webserver/src/fd_manager.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
   "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/test/test.cpp.o -c /home/qlc/webserver/test/test.cpp",
   "file": "/home/qlc/webserver/test/test.cpp"
 },
@@ -78,5 +88,10 @@
   "directory": "/home/qlc/webserver/build",
   "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o -c /home/qlc/webserver/test/test_iomanager.cpp",
   "file": "/home/qlc/webserver/test/test_iomanager.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_hook.dir/test/test_hook.cpp.o -c /home/qlc/webserver/test/test_hook.cpp",
+  "file": "/home/qlc/webserver/test/test_hook.cpp"
 }
 ]

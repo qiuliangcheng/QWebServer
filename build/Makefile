@@ -223,6 +223,19 @@ test_iomanager/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
 .PHONY : test_iomanager/fast
 
+#=============================================================================
+# Target rules for targets named test_hook
+
+# Build rule for target.
+test_hook: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
+
+# fast build rule for target.
+test_hook/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -247,6 +260,30 @@ src/config.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/config.cpp.s
 .PHONY : src/config.cpp.s
 
+src/fd_manager.o: src/fd_manager.cpp.o
+.PHONY : src/fd_manager.o
+
+# target to build an object file
+src/fd_manager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fd_manager.cpp.o
+.PHONY : src/fd_manager.cpp.o
+
+src/fd_manager.i: src/fd_manager.cpp.i
+.PHONY : src/fd_manager.i
+
+# target to preprocess a source file
+src/fd_manager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fd_manager.cpp.i
+.PHONY : src/fd_manager.cpp.i
+
+src/fd_manager.s: src/fd_manager.cpp.s
+.PHONY : src/fd_manager.s
+
+# target to generate assembly for a file
+src/fd_manager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fd_manager.cpp.s
+.PHONY : src/fd_manager.cpp.s
+
 src/fiber.o: src/fiber.cpp.o
 .PHONY : src/fiber.o
 
@@ -270,6 +307,30 @@ src/fiber.s: src/fiber.cpp.s
 src/fiber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/fiber.cpp.s
 .PHONY : src/fiber.cpp.s
+
+src/hook.o: src/hook.cpp.o
+.PHONY : src/hook.o
+
+# target to build an object file
+src/hook.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/hook.cpp.o
+.PHONY : src/hook.cpp.o
+
+src/hook.i: src/hook.cpp.i
+.PHONY : src/hook.i
+
+# target to preprocess a source file
+src/hook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/hook.cpp.i
+.PHONY : src/hook.cpp.i
+
+src/hook.s: src/hook.cpp.s
+.PHONY : src/hook.s
+
+# target to generate assembly for a file
+src/hook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/hook.cpp.s
+.PHONY : src/hook.cpp.s
 
 src/iomanager.o: src/iomanager.cpp.o
 .PHONY : src/iomanager.o
@@ -511,6 +572,30 @@ test/test_fiber.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/test/test_fiber.cpp.s
 .PHONY : test/test_fiber.cpp.s
 
+test/test_hook.o: test/test_hook.cpp.o
+.PHONY : test/test_hook.o
+
+# target to build an object file
+test/test_hook.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/test/test_hook.cpp.o
+.PHONY : test/test_hook.cpp.o
+
+test/test_hook.i: test/test_hook.cpp.i
+.PHONY : test/test_hook.i
+
+# target to preprocess a source file
+test/test_hook.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/test/test_hook.cpp.i
+.PHONY : test/test_hook.cpp.i
+
+test/test_hook.s: test/test_hook.cpp.s
+.PHONY : test/test_hook.s
+
+# target to generate assembly for a file
+test/test_hook.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/test/test_hook.cpp.s
+.PHONY : test/test_hook.cpp.s
+
 test/test_iomanager.o: test/test_iomanager.cpp.o
 .PHONY : test/test_iomanager.o
 
@@ -619,6 +704,7 @@ help:
 	@echo "... test"
 	@echo "... test_config"
 	@echo "... test_fiber"
+	@echo "... test_hook"
 	@echo "... test_iomanager"
 	@echo "... test_schedular"
 	@echo "... test_thread"
@@ -626,9 +712,15 @@ help:
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
+	@echo "... src/fd_manager.o"
+	@echo "... src/fd_manager.i"
+	@echo "... src/fd_manager.s"
 	@echo "... src/fiber.o"
 	@echo "... src/fiber.i"
 	@echo "... src/fiber.s"
+	@echo "... src/hook.o"
+	@echo "... src/hook.i"
+	@echo "... src/hook.s"
 	@echo "... src/iomanager.o"
 	@echo "... src/iomanager.i"
 	@echo "... src/iomanager.s"
@@ -659,6 +751,9 @@ help:
 	@echo "... test/test_fiber.o"
 	@echo "... test/test_fiber.i"
 	@echo "... test/test_fiber.s"
+	@echo "... test/test_hook.o"
+	@echo "... test/test_hook.i"
+	@echo "... test/test_hook.s"
 	@echo "... test/test_iomanager.o"
 	@echo "... test/test_iomanager.i"
 	@echo "... test/test_iomanager.s"

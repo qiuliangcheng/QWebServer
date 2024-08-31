@@ -49,7 +49,6 @@ void Config::LoadFromYaml(const YAML::Node &root)
 
         if(var) {
             if(i.second.IsScalar()) {
-                
                 var->fromString(i.second.Scalar());
             } else {
                 

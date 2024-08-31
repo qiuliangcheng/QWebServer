@@ -9,9 +9,10 @@
 #include <atomic>
 #include <string>
 #include <iostream>
+#include "noncopyable.h"
 //把锁和线程的东西自己封装一层
 namespace qlc{
-class Semaphore {
+class Semaphore :public Noncopyable{
 public:
     Semaphore(uint32_t count=0);
     ~Semaphore();
@@ -55,7 +56,7 @@ private:
 
 //接下来是实现一些锁就可以了
 //首先实现一个互斥锁
-class Mutex{
+class Mutex : Noncopyable{
 public:
     typedef ScopedLockImpl<Mutex> Lock;
     Mutex(){
@@ -75,7 +76,7 @@ private:
 };
 
 //自旋锁
-class Spinlock {
+class Spinlock :public Noncopyable{
 public:
 
     typedef ScopedLockImpl<Spinlock> Lock;
@@ -159,7 +160,7 @@ private:
     bool m_locked;
 };
 
-class RWMutex {
+class RWMutex:public Noncopyable{
 public:
 
     /// 局部读锁
@@ -189,7 +190,7 @@ private:
     pthread_rwlock_t m_lock;
 };
 //空锁
-class NullMutex {
+class NullMutex :public Noncopyable{
 public:
     typedef ScopedLockImpl<NullMutex> Lock;
 
@@ -200,7 +201,7 @@ public:
 
     void unlock() {}
 };
-class NullRWMutex  {
+class NullRWMutex :public Noncopyable {
 public:
     /// 局部读锁
     typedef ReadScopedLockImpl<NullRWMutex> ReadLock;
