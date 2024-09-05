@@ -1,97 +1,112 @@
 [
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/qlc_log.cpp.o -c /home/qlc/webserver/src/qlc_log.cpp",
-  "file": "/home/qlc/webserver/src/qlc_log.cpp"
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/address.cpp.o -c /home/qlc/webserver/src/address.cpp",
+  "file": "/home/qlc/webserver/src/address.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/util.cpp.o -c /home/qlc/webserver/src/util.cpp",
-  "file": "/home/qlc/webserver/src/util.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/config.cpp.o -c /home/qlc/webserver/src/config.cpp",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/config.cpp.o -c /home/qlc/webserver/src/config.cpp",
   "file": "/home/qlc/webserver/src/config.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/thread.cpp.o -c /home/qlc/webserver/src/thread.cpp",
-  "file": "/home/qlc/webserver/src/thread.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/mutex.cpp.o -c /home/qlc/webserver/src/mutex.cpp",
-  "file": "/home/qlc/webserver/src/mutex.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/fiber.cpp.o -c /home/qlc/webserver/src/fiber.cpp",
-  "file": "/home/qlc/webserver/src/fiber.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/schedular.cpp.o -c /home/qlc/webserver/src/schedular.cpp",
-  "file": "/home/qlc/webserver/src/schedular.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/iomanager.cpp.o -c /home/qlc/webserver/src/iomanager.cpp",
-  "file": "/home/qlc/webserver/src/iomanager.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/timer.cpp.o -c /home/qlc/webserver/src/timer.cpp",
-  "file": "/home/qlc/webserver/src/timer.cpp"
-},
-{
-  "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/hook.cpp.o -c /home/qlc/webserver/src/hook.cpp",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/hook.cpp.o -c /home/qlc/webserver/src/hook.cpp",
   "file": "/home/qlc/webserver/src/hook.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/fd_manager.cpp.o -c /home/qlc/webserver/src/fd_manager.cpp",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/iomanager.cpp.o -c /home/qlc/webserver/src/iomanager.cpp",
+  "file": "/home/qlc/webserver/src/iomanager.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/fiber.cpp.o -c /home/qlc/webserver/src/fiber.cpp",
+  "file": "/home/qlc/webserver/src/fiber.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/qlc_log.cpp.o -c /home/qlc/webserver/src/qlc_log.cpp",
+  "file": "/home/qlc/webserver/src/qlc_log.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/util.cpp.o -c /home/qlc/webserver/src/util.cpp",
+  "file": "/home/qlc/webserver/src/util.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/thread.cpp.o -c /home/qlc/webserver/src/thread.cpp",
+  "file": "/home/qlc/webserver/src/thread.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/mutex.cpp.o -c /home/qlc/webserver/src/mutex.cpp",
+  "file": "/home/qlc/webserver/src/mutex.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/schedular.cpp.o -c /home/qlc/webserver/src/schedular.cpp",
+  "file": "/home/qlc/webserver/src/schedular.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/timer.cpp.o -c /home/qlc/webserver/src/timer.cpp",
+  "file": "/home/qlc/webserver/src/timer.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/fd_manager.cpp.o -c /home/qlc/webserver/src/fd_manager.cpp",
   "file": "/home/qlc/webserver/src/fd_manager.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/test/test.cpp.o -c /home/qlc/webserver/test/test.cpp",
+  "command": "/usr/bin/c++ -Dqlc_EXPORTS -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -fPIC -o CMakeFiles/qlc.dir/src/socket.cpp.o -c /home/qlc/webserver/src/socket.cpp",
+  "file": "/home/qlc/webserver/src/socket.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test.dir/test/test.cpp.o -c /home/qlc/webserver/test/test.cpp",
   "file": "/home/qlc/webserver/test/test.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_config.dir/test/test_config.cpp.o -c /home/qlc/webserver/test/test_config.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_config.dir/test/test_config.cpp.o -c /home/qlc/webserver/test/test_config.cpp",
   "file": "/home/qlc/webserver/test/test_config.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_thread.dir/test/test_thread.cpp.o -c /home/qlc/webserver/test/test_thread.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_thread.dir/test/test_thread.cpp.o -c /home/qlc/webserver/test/test_thread.cpp",
   "file": "/home/qlc/webserver/test/test_thread.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_util.dir/test/test_util.cpp.o -c /home/qlc/webserver/test/test_util.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_util.dir/test/test_util.cpp.o -c /home/qlc/webserver/test/test_util.cpp",
   "file": "/home/qlc/webserver/test/test_util.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o -c /home/qlc/webserver/test/test_fiber.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_fiber.dir/test/test_fiber.cpp.o -c /home/qlc/webserver/test/test_fiber.cpp",
   "file": "/home/qlc/webserver/test/test_fiber.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_schedular.dir/test/test_schedular.cpp.o -c /home/qlc/webserver/test/test_schedular.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_schedular.dir/test/test_schedular.cpp.o -c /home/qlc/webserver/test/test_schedular.cpp",
   "file": "/home/qlc/webserver/test/test_schedular.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o -c /home/qlc/webserver/test/test_iomanager.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_iomanager.dir/test/test_iomanager.cpp.o -c /home/qlc/webserver/test/test_iomanager.cpp",
   "file": "/home/qlc/webserver/test/test_iomanager.cpp"
 },
 {
   "directory": "/home/qlc/webserver/build",
-  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O0 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_hook.dir/test/test_hook.cpp.o -c /home/qlc/webserver/test/test_hook.cpp",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_hook.dir/test/test_hook.cpp.o -c /home/qlc/webserver/test/test_hook.cpp",
   "file": "/home/qlc/webserver/test/test_hook.cpp"
+},
+{
+  "directory": "/home/qlc/webserver/build",
+  "command": "/usr/bin/c++  -I/home/qlc/webserver/./include  -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations -g -o CMakeFiles/test_socket.dir/test/test_socket.cpp.o -c /home/qlc/webserver/test/test_socket.cpp",
+  "file": "/home/qlc/webserver/test/test_socket.cpp"
 }
 ]

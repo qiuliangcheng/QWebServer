@@ -1,15 +1,19 @@
 #include "address.h"
-#include "endian.h"
 #include "qlc.h"
 #include <netdb.h>
 #include <ifaddrs.h>
 #include <stddef.h>
 #include <sstream>
+
+#include "Endian.h"
+
 namespace qlc{
 static qlc::Logger::ptr g_logger=QLC_LOG_NAME("system");
 template<class T>
 static T CreateMask(uint32_t bits){
-    return 1<<(sizeof(T)*8-bits)-1;//这样高位的bits位全是1
+    //这样高位的bits位全是1
+    return (1 << (sizeof(T) * 8 - bits)) - 1;
+
 }
 //统计1的个数的算法
 template<class T>
@@ -51,7 +55,6 @@ bool Address::Lookup(std::vector<Address::ptr> &result, const std::string &host,
     hints.ai_family=family;
     hints.ai_socktype=type;
     hints.ai_addr=NULL;
-    hints.ai_addrlen=NULL;
     hints.ai_next = NULL;
     hints.ai_addrlen = 0;
     hints.ai_canonname = NULL;
@@ -428,6 +431,12 @@ IPv6Address::IPv6Address(const sockaddr_in6 &address)
     m_addr=address;
 }
 
+IPv6Address::IPv6Address()
+{
+    memset(&m_addr, 0, sizeof(m_addr));
+    m_addr.sin6_family = AF_INET6;
+}
+
 IPv6Address::IPv6Address(const uint8_t address[16], uint16_t port)
 {
     memset(&m_addr,0,sizeof(m_addr));
@@ -566,7 +575,14 @@ const sockaddr *UnixAddress::getAddr() const
 {
     return (sockaddr*)&m_addr;
 }
-
+sockaddr *UnixAddress::getAddr()
+{
+    return (sockaddr*)&m_addr;
+}
+socklen_t UnixAddress::getAddrLen() const
+{
+    return m_length;
+}
 void UnixAddress::setAddlen(uint32_t v)
 {
     m_length=v;

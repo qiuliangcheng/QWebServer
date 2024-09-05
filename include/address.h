@@ -1,19 +1,20 @@
 #ifndef __QLC_ADDRESS_H
 #define __QLC_ADDRESS_H
 #include <memory>
-#include <sys/types.h>          /* See NOTES */
+#include <sys/types.h>          
 #include <sys/socket.h>
 #include <vector>
 #include <map>
 #include <sys/un.h>
 #include <arpa/inet.h>
+
 namespace qlc{
 class IPAddress;
 class Address {
 public:
     typedef std::shared_ptr<Address> ptr;
     static Address::ptr Create(const sockaddr* addr,socklen_t len);//
-    Address();
+    Address()=default;
 
     /**
      * @brief 通过host地址返回对应条件的所有Address
@@ -199,6 +200,9 @@ public:
 private:
     sockaddr m_addr;
 };
+
+std::ostream& operator<<(std::ostream& os, const Address& addr);
+
 
 }
 #endif

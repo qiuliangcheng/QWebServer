@@ -91,7 +91,7 @@ FdCtx::ptr FdManager::get(int fd, bool auto_create) {
     lock.unlock();
 
     RWType::WriteLock lock2(m_mutex);
-    FdCtx::ptr ctx(new FdCtx(fd));
+    FdCtx::ptr ctx(new FdCtx(fd));//这边就调用了init函数了  私有成员的东西只有在自己类里面使用 在其他类里面是不可以使用的
     if(fd >= (int)m_datas.size()) {
         m_datas.resize(fd * 1.5);
     }

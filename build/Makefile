@@ -236,6 +236,43 @@ test_hook/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
 .PHONY : test_hook/fast
 
+#=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+src/address.o: src/address.cpp.o
+.PHONY : src/address.o
+
+# target to build an object file
+src/address.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/address.cpp.o
+.PHONY : src/address.cpp.o
+
+src/address.i: src/address.cpp.i
+.PHONY : src/address.i
+
+# target to preprocess a source file
+src/address.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/address.cpp.i
+.PHONY : src/address.cpp.i
+
+src/address.s: src/address.cpp.s
+.PHONY : src/address.s
+
+# target to generate assembly for a file
+src/address.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/address.cpp.s
+.PHONY : src/address.cpp.s
+
 src/config.o: src/config.cpp.o
 .PHONY : src/config.o
 
@@ -427,6 +464,30 @@ src/schedular.s: src/schedular.cpp.s
 src/schedular.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/schedular.cpp.s
 .PHONY : src/schedular.cpp.s
+
+src/socket.o: src/socket.cpp.o
+.PHONY : src/socket.o
+
+# target to build an object file
+src/socket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/socket.cpp.o
+.PHONY : src/socket.cpp.o
+
+src/socket.i: src/socket.cpp.i
+.PHONY : src/socket.i
+
+# target to preprocess a source file
+src/socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/socket.cpp.i
+.PHONY : src/socket.cpp.i
+
+src/socket.s: src/socket.cpp.s
+.PHONY : src/socket.s
+
+# target to generate assembly for a file
+src/socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/qlc.dir/build.make CMakeFiles/qlc.dir/src/socket.cpp.s
+.PHONY : src/socket.cpp.s
 
 src/thread.o: src/thread.cpp.o
 .PHONY : src/thread.o
@@ -644,6 +705,30 @@ test/test_schedular.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_schedular.dir/build.make CMakeFiles/test_schedular.dir/test/test_schedular.cpp.s
 .PHONY : test/test_schedular.cpp.s
 
+test/test_socket.o: test/test_socket.cpp.o
+.PHONY : test/test_socket.o
+
+# target to build an object file
+test/test_socket.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/test/test_socket.cpp.o
+.PHONY : test/test_socket.cpp.o
+
+test/test_socket.i: test/test_socket.cpp.i
+.PHONY : test/test_socket.i
+
+# target to preprocess a source file
+test/test_socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/test/test_socket.cpp.i
+.PHONY : test/test_socket.cpp.i
+
+test/test_socket.s: test/test_socket.cpp.s
+.PHONY : test/test_socket.s
+
+# target to generate assembly for a file
+test/test_socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/test/test_socket.cpp.s
+.PHONY : test/test_socket.cpp.s
+
 test/test_thread.o: test/test_thread.cpp.o
 .PHONY : test/test_thread.o
 
@@ -707,8 +792,12 @@ help:
 	@echo "... test_hook"
 	@echo "... test_iomanager"
 	@echo "... test_schedular"
+	@echo "... test_socket"
 	@echo "... test_thread"
 	@echo "... test_util"
+	@echo "... src/address.o"
+	@echo "... src/address.i"
+	@echo "... src/address.s"
 	@echo "... src/config.o"
 	@echo "... src/config.i"
 	@echo "... src/config.s"
@@ -733,6 +822,9 @@ help:
 	@echo "... src/schedular.o"
 	@echo "... src/schedular.i"
 	@echo "... src/schedular.s"
+	@echo "... src/socket.o"
+	@echo "... src/socket.i"
+	@echo "... src/socket.s"
 	@echo "... src/thread.o"
 	@echo "... src/thread.i"
 	@echo "... src/thread.s"
@@ -760,6 +852,9 @@ help:
 	@echo "... test/test_schedular.o"
 	@echo "... test/test_schedular.i"
 	@echo "... test/test_schedular.s"
+	@echo "... test/test_socket.o"
+	@echo "... test/test_socket.i"
+	@echo "... test/test_socket.s"
 	@echo "... test/test_thread.o"
 	@echo "... test/test_thread.i"
 	@echo "... test/test_thread.s"

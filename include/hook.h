@@ -80,5 +80,7 @@ extern getsockopt_fun getsockopt_f;
 typedef int (*setsockopt_fun)(int sockfd, int level, int optname, const void *optval, socklen_t optlen);
 extern setsockopt_fun setsockopt_f;
 //setsockopt 函数用于设置套接字选项，允许程序员配置套接字的各种属性。它是一个系统调用，用于在套接字层面上设置一些参数，以调整套接字的行为。
+extern int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms);
 }
+
 #endif

@@ -42,6 +42,7 @@ void init_hook(){
     if(is_init){
         return;
     }
+    
 #define XX(name) name ## _f = (name ## _fun)dlsym(RTLD_NEXT, #name);
     HOOK_Fun(XX);
 #undef XX
@@ -177,7 +178,6 @@ public:
 
 void(qlc::Schedular::*) member_function_pointer = &qlc::Schedular::some_member_function;
 */
-
 int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms) {
 //If the connection or binding succeeds, zero is returned.  On error, -1 is returned, and errno is set appropriately.
     if(!qlc::t_hook_enable){
