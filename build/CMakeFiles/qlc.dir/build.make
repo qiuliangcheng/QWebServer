@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/qlc/webserver
+CMAKE_SOURCE_DIR = /home/qlc/c++_code/QWebServer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/qlc/webserver/build
+CMAKE_BINARY_DIR = /home/qlc/c++_code/QWebServer/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/qlc.dir/depend.make
@@ -75,184 +75,184 @@ include CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/address.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/address.cpp.o: ../src/address.cpp
 CMakeFiles/qlc.dir/src/address.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/qlc.dir/src/address.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/address.cpp.o -MF CMakeFiles/qlc.dir/src/address.cpp.o.d -o CMakeFiles/qlc.dir/src/address.cpp.o -c /home/qlc/webserver/src/address.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/qlc.dir/src/address.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/address.cpp.o -MF CMakeFiles/qlc.dir/src/address.cpp.o.d -o CMakeFiles/qlc.dir/src/address.cpp.o -c /home/qlc/c++_code/QWebServer/src/address.cpp
 
 CMakeFiles/qlc.dir/src/address.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/address.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/address.cpp > CMakeFiles/qlc.dir/src/address.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/address.cpp > CMakeFiles/qlc.dir/src/address.cpp.i
 
 CMakeFiles/qlc.dir/src/address.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/address.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/address.cpp -o CMakeFiles/qlc.dir/src/address.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/address.cpp -o CMakeFiles/qlc.dir/src/address.cpp.s
 
 CMakeFiles/qlc.dir/src/config.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/config.cpp.o: ../src/config.cpp
 CMakeFiles/qlc.dir/src/config.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/qlc.dir/src/config.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/config.cpp.o -MF CMakeFiles/qlc.dir/src/config.cpp.o.d -o CMakeFiles/qlc.dir/src/config.cpp.o -c /home/qlc/webserver/src/config.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/qlc.dir/src/config.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/config.cpp.o -MF CMakeFiles/qlc.dir/src/config.cpp.o.d -o CMakeFiles/qlc.dir/src/config.cpp.o -c /home/qlc/c++_code/QWebServer/src/config.cpp
 
 CMakeFiles/qlc.dir/src/config.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/config.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/config.cpp > CMakeFiles/qlc.dir/src/config.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/config.cpp > CMakeFiles/qlc.dir/src/config.cpp.i
 
 CMakeFiles/qlc.dir/src/config.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/config.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/config.cpp -o CMakeFiles/qlc.dir/src/config.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/config.cpp -o CMakeFiles/qlc.dir/src/config.cpp.s
 
 CMakeFiles/qlc.dir/src/hook.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/hook.cpp.o: ../src/hook.cpp
 CMakeFiles/qlc.dir/src/hook.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/qlc.dir/src/hook.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/hook.cpp.o -MF CMakeFiles/qlc.dir/src/hook.cpp.o.d -o CMakeFiles/qlc.dir/src/hook.cpp.o -c /home/qlc/webserver/src/hook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/qlc.dir/src/hook.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/hook.cpp.o -MF CMakeFiles/qlc.dir/src/hook.cpp.o.d -o CMakeFiles/qlc.dir/src/hook.cpp.o -c /home/qlc/c++_code/QWebServer/src/hook.cpp
 
 CMakeFiles/qlc.dir/src/hook.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/hook.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/hook.cpp > CMakeFiles/qlc.dir/src/hook.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/hook.cpp > CMakeFiles/qlc.dir/src/hook.cpp.i
 
 CMakeFiles/qlc.dir/src/hook.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/hook.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/hook.cpp -o CMakeFiles/qlc.dir/src/hook.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/hook.cpp -o CMakeFiles/qlc.dir/src/hook.cpp.s
 
 CMakeFiles/qlc.dir/src/iomanager.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/iomanager.cpp.o: ../src/iomanager.cpp
 CMakeFiles/qlc.dir/src/iomanager.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/qlc.dir/src/iomanager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/iomanager.cpp.o -MF CMakeFiles/qlc.dir/src/iomanager.cpp.o.d -o CMakeFiles/qlc.dir/src/iomanager.cpp.o -c /home/qlc/webserver/src/iomanager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/qlc.dir/src/iomanager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/iomanager.cpp.o -MF CMakeFiles/qlc.dir/src/iomanager.cpp.o.d -o CMakeFiles/qlc.dir/src/iomanager.cpp.o -c /home/qlc/c++_code/QWebServer/src/iomanager.cpp
 
 CMakeFiles/qlc.dir/src/iomanager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/iomanager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/iomanager.cpp > CMakeFiles/qlc.dir/src/iomanager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/iomanager.cpp > CMakeFiles/qlc.dir/src/iomanager.cpp.i
 
 CMakeFiles/qlc.dir/src/iomanager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/iomanager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/iomanager.cpp -o CMakeFiles/qlc.dir/src/iomanager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/iomanager.cpp -o CMakeFiles/qlc.dir/src/iomanager.cpp.s
 
 CMakeFiles/qlc.dir/src/fiber.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/fiber.cpp.o: ../src/fiber.cpp
 CMakeFiles/qlc.dir/src/fiber.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/qlc.dir/src/fiber.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/fiber.cpp.o -MF CMakeFiles/qlc.dir/src/fiber.cpp.o.d -o CMakeFiles/qlc.dir/src/fiber.cpp.o -c /home/qlc/webserver/src/fiber.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/qlc.dir/src/fiber.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/fiber.cpp.o -MF CMakeFiles/qlc.dir/src/fiber.cpp.o.d -o CMakeFiles/qlc.dir/src/fiber.cpp.o -c /home/qlc/c++_code/QWebServer/src/fiber.cpp
 
 CMakeFiles/qlc.dir/src/fiber.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/fiber.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/fiber.cpp > CMakeFiles/qlc.dir/src/fiber.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/fiber.cpp > CMakeFiles/qlc.dir/src/fiber.cpp.i
 
 CMakeFiles/qlc.dir/src/fiber.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/fiber.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/fiber.cpp -o CMakeFiles/qlc.dir/src/fiber.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/fiber.cpp -o CMakeFiles/qlc.dir/src/fiber.cpp.s
 
 CMakeFiles/qlc.dir/src/qlc_log.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/qlc_log.cpp.o: ../src/qlc_log.cpp
 CMakeFiles/qlc.dir/src/qlc_log.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/qlc.dir/src/qlc_log.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/qlc_log.cpp.o -MF CMakeFiles/qlc.dir/src/qlc_log.cpp.o.d -o CMakeFiles/qlc.dir/src/qlc_log.cpp.o -c /home/qlc/webserver/src/qlc_log.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/qlc.dir/src/qlc_log.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/qlc_log.cpp.o -MF CMakeFiles/qlc.dir/src/qlc_log.cpp.o.d -o CMakeFiles/qlc.dir/src/qlc_log.cpp.o -c /home/qlc/c++_code/QWebServer/src/qlc_log.cpp
 
 CMakeFiles/qlc.dir/src/qlc_log.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/qlc_log.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/qlc_log.cpp > CMakeFiles/qlc.dir/src/qlc_log.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/qlc_log.cpp > CMakeFiles/qlc.dir/src/qlc_log.cpp.i
 
 CMakeFiles/qlc.dir/src/qlc_log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/qlc_log.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/qlc_log.cpp -o CMakeFiles/qlc.dir/src/qlc_log.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/qlc_log.cpp -o CMakeFiles/qlc.dir/src/qlc_log.cpp.s
 
 CMakeFiles/qlc.dir/src/util.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/util.cpp.o: ../src/util.cpp
 CMakeFiles/qlc.dir/src/util.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/qlc.dir/src/util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/util.cpp.o -MF CMakeFiles/qlc.dir/src/util.cpp.o.d -o CMakeFiles/qlc.dir/src/util.cpp.o -c /home/qlc/webserver/src/util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/qlc.dir/src/util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/util.cpp.o -MF CMakeFiles/qlc.dir/src/util.cpp.o.d -o CMakeFiles/qlc.dir/src/util.cpp.o -c /home/qlc/c++_code/QWebServer/src/util.cpp
 
 CMakeFiles/qlc.dir/src/util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/util.cpp > CMakeFiles/qlc.dir/src/util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/util.cpp > CMakeFiles/qlc.dir/src/util.cpp.i
 
 CMakeFiles/qlc.dir/src/util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/util.cpp -o CMakeFiles/qlc.dir/src/util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/util.cpp -o CMakeFiles/qlc.dir/src/util.cpp.s
 
 CMakeFiles/qlc.dir/src/thread.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/thread.cpp.o: ../src/thread.cpp
 CMakeFiles/qlc.dir/src/thread.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/qlc.dir/src/thread.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/thread.cpp.o -MF CMakeFiles/qlc.dir/src/thread.cpp.o.d -o CMakeFiles/qlc.dir/src/thread.cpp.o -c /home/qlc/webserver/src/thread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/qlc.dir/src/thread.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/thread.cpp.o -MF CMakeFiles/qlc.dir/src/thread.cpp.o.d -o CMakeFiles/qlc.dir/src/thread.cpp.o -c /home/qlc/c++_code/QWebServer/src/thread.cpp
 
 CMakeFiles/qlc.dir/src/thread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/thread.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/thread.cpp > CMakeFiles/qlc.dir/src/thread.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/thread.cpp > CMakeFiles/qlc.dir/src/thread.cpp.i
 
 CMakeFiles/qlc.dir/src/thread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/thread.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/thread.cpp -o CMakeFiles/qlc.dir/src/thread.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/thread.cpp -o CMakeFiles/qlc.dir/src/thread.cpp.s
 
 CMakeFiles/qlc.dir/src/mutex.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/mutex.cpp.o: ../src/mutex.cpp
 CMakeFiles/qlc.dir/src/mutex.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/qlc.dir/src/mutex.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/mutex.cpp.o -MF CMakeFiles/qlc.dir/src/mutex.cpp.o.d -o CMakeFiles/qlc.dir/src/mutex.cpp.o -c /home/qlc/webserver/src/mutex.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/qlc.dir/src/mutex.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/mutex.cpp.o -MF CMakeFiles/qlc.dir/src/mutex.cpp.o.d -o CMakeFiles/qlc.dir/src/mutex.cpp.o -c /home/qlc/c++_code/QWebServer/src/mutex.cpp
 
 CMakeFiles/qlc.dir/src/mutex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/mutex.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/mutex.cpp > CMakeFiles/qlc.dir/src/mutex.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/mutex.cpp > CMakeFiles/qlc.dir/src/mutex.cpp.i
 
 CMakeFiles/qlc.dir/src/mutex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/mutex.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/mutex.cpp -o CMakeFiles/qlc.dir/src/mutex.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/mutex.cpp -o CMakeFiles/qlc.dir/src/mutex.cpp.s
 
 CMakeFiles/qlc.dir/src/schedular.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/schedular.cpp.o: ../src/schedular.cpp
 CMakeFiles/qlc.dir/src/schedular.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/qlc.dir/src/schedular.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/schedular.cpp.o -MF CMakeFiles/qlc.dir/src/schedular.cpp.o.d -o CMakeFiles/qlc.dir/src/schedular.cpp.o -c /home/qlc/webserver/src/schedular.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/qlc.dir/src/schedular.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/schedular.cpp.o -MF CMakeFiles/qlc.dir/src/schedular.cpp.o.d -o CMakeFiles/qlc.dir/src/schedular.cpp.o -c /home/qlc/c++_code/QWebServer/src/schedular.cpp
 
 CMakeFiles/qlc.dir/src/schedular.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/schedular.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/schedular.cpp > CMakeFiles/qlc.dir/src/schedular.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/schedular.cpp > CMakeFiles/qlc.dir/src/schedular.cpp.i
 
 CMakeFiles/qlc.dir/src/schedular.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/schedular.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/schedular.cpp -o CMakeFiles/qlc.dir/src/schedular.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/schedular.cpp -o CMakeFiles/qlc.dir/src/schedular.cpp.s
 
 CMakeFiles/qlc.dir/src/timer.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/timer.cpp.o: ../src/timer.cpp
 CMakeFiles/qlc.dir/src/timer.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/qlc.dir/src/timer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/timer.cpp.o -MF CMakeFiles/qlc.dir/src/timer.cpp.o.d -o CMakeFiles/qlc.dir/src/timer.cpp.o -c /home/qlc/webserver/src/timer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/qlc.dir/src/timer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/timer.cpp.o -MF CMakeFiles/qlc.dir/src/timer.cpp.o.d -o CMakeFiles/qlc.dir/src/timer.cpp.o -c /home/qlc/c++_code/QWebServer/src/timer.cpp
 
 CMakeFiles/qlc.dir/src/timer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/timer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/timer.cpp > CMakeFiles/qlc.dir/src/timer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/timer.cpp > CMakeFiles/qlc.dir/src/timer.cpp.i
 
 CMakeFiles/qlc.dir/src/timer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/timer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/timer.cpp -o CMakeFiles/qlc.dir/src/timer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/timer.cpp -o CMakeFiles/qlc.dir/src/timer.cpp.s
 
 CMakeFiles/qlc.dir/src/fd_manager.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/fd_manager.cpp.o: ../src/fd_manager.cpp
 CMakeFiles/qlc.dir/src/fd_manager.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/qlc.dir/src/fd_manager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/fd_manager.cpp.o -MF CMakeFiles/qlc.dir/src/fd_manager.cpp.o.d -o CMakeFiles/qlc.dir/src/fd_manager.cpp.o -c /home/qlc/webserver/src/fd_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/qlc.dir/src/fd_manager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/fd_manager.cpp.o -MF CMakeFiles/qlc.dir/src/fd_manager.cpp.o.d -o CMakeFiles/qlc.dir/src/fd_manager.cpp.o -c /home/qlc/c++_code/QWebServer/src/fd_manager.cpp
 
 CMakeFiles/qlc.dir/src/fd_manager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/fd_manager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/fd_manager.cpp > CMakeFiles/qlc.dir/src/fd_manager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/fd_manager.cpp > CMakeFiles/qlc.dir/src/fd_manager.cpp.i
 
 CMakeFiles/qlc.dir/src/fd_manager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/fd_manager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/fd_manager.cpp -o CMakeFiles/qlc.dir/src/fd_manager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/fd_manager.cpp -o CMakeFiles/qlc.dir/src/fd_manager.cpp.s
 
 CMakeFiles/qlc.dir/src/socket.cpp.o: CMakeFiles/qlc.dir/flags.make
 CMakeFiles/qlc.dir/src/socket.cpp.o: ../src/socket.cpp
 CMakeFiles/qlc.dir/src/socket.cpp.o: CMakeFiles/qlc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/qlc.dir/src/socket.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/socket.cpp.o -MF CMakeFiles/qlc.dir/src/socket.cpp.o.d -o CMakeFiles/qlc.dir/src/socket.cpp.o -c /home/qlc/webserver/src/socket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/qlc.dir/src/socket.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/qlc.dir/src/socket.cpp.o -MF CMakeFiles/qlc.dir/src/socket.cpp.o.d -o CMakeFiles/qlc.dir/src/socket.cpp.o -c /home/qlc/c++_code/QWebServer/src/socket.cpp
 
 CMakeFiles/qlc.dir/src/socket.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/qlc.dir/src/socket.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/webserver/src/socket.cpp > CMakeFiles/qlc.dir/src/socket.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/qlc/c++_code/QWebServer/src/socket.cpp > CMakeFiles/qlc.dir/src/socket.cpp.i
 
 CMakeFiles/qlc.dir/src/socket.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/qlc.dir/src/socket.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/webserver/src/socket.cpp -o CMakeFiles/qlc.dir/src/socket.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/qlc/c++_code/QWebServer/src/socket.cpp -o CMakeFiles/qlc.dir/src/socket.cpp.s
 
 # Object files for target qlc
 qlc_OBJECTS = \
@@ -288,7 +288,7 @@ qlc_EXTERNAL_OBJECTS =
 ../lib/libqlc.so: CMakeFiles/qlc.dir/src/socket.cpp.o
 ../lib/libqlc.so: CMakeFiles/qlc.dir/build.make
 ../lib/libqlc.so: CMakeFiles/qlc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qlc/webserver/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../lib/libqlc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/qlc/c++_code/QWebServer/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../lib/libqlc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/qlc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -300,6 +300,6 @@ CMakeFiles/qlc.dir/clean:
 .PHONY : CMakeFiles/qlc.dir/clean
 
 CMakeFiles/qlc.dir/depend:
-	cd /home/qlc/webserver/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qlc/webserver /home/qlc/webserver /home/qlc/webserver/build /home/qlc/webserver/build /home/qlc/webserver/build/CMakeFiles/qlc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/qlc/c++_code/QWebServer/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/qlc/c++_code/QWebServer /home/qlc/c++_code/QWebServer /home/qlc/c++_code/QWebServer/build /home/qlc/c++_code/QWebServer/build /home/qlc/c++_code/QWebServer/build/CMakeFiles/qlc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/qlc.dir/depend
 

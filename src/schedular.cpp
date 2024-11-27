@@ -44,7 +44,7 @@ Schedular *Schedular::GetThis()
 }
 Fiber *Schedular::GetMainFiber()
 {
-    return t_schedular_fiber;
+    return t_schedular_fiber;//调度协程 可以认为是跑run方法那边的协程 我就说怎么可能是线程的主协程呢
 }
 void Schedular::start()
 {
@@ -61,9 +61,15 @@ void Schedular::start()
     lock.unlock();//如果不unlock的话 会一直死锁
 
 }
+//stop的流程：
+/*
+1、如果用主线程去进行协程的调度
+swapout返回的是主协程 m_rootFiber 其实本质也只是主协程下的一个协程
+*/
 void Schedular::stop()
 {
     m_autoStop=true;
+    //如果只有主线程运行 并且主协程下的协程没有任务要进行处理
     if(m_rootFiber && m_threadCount==0 && (m_rootFiber->getState()==Fiber::TERM || m_rootFiber->getState() == Fiber::INIT)){ //相当于只有主线程的时候
         QLC_LOG_INFO(g_logger)<< this <<"stopped";
         m_stopping=true;
@@ -76,7 +82,8 @@ void Schedular::stop()
     if(m_rootThread != -1) { //用主线程
         QLC_ASSERT(GetThis() == this);
     } else {
-        //  std::cout<<"析构函数： "<<this<<"   "<<GetThis()<<std::endl;
+        std::cout<<"析构函数： "<<this<<"   "<<GetThis()<<std::endl;
+        //如果没有设置主线程的调度器 那么主线程的值就是0
         QLC_ASSERT(GetThis() != this);
     }
     m_stopping = true;
@@ -88,7 +95,7 @@ void Schedular::stop()
     }
     if(m_rootFiber){
         if(!stopping()) {//如果还有活跃的线程数量  也就是说其他的协程还没跑完 主协程也开始运行
-            m_rootFiber->call();
+            m_rootFiber->call();//设置为true
         }
     }
     std::vector<Thread::ptr> thrs;

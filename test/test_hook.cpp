@@ -15,6 +15,7 @@ void test_sleep(){
         QLC_LOG_INFO(g_logger)<<"sleep 3";
 
     });
+    // while(1){}
     QLC_LOG_INFO(g_logger)<<"sleep";
 
 }
